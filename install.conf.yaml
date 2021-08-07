@@ -12,9 +12,11 @@
       recursive: true
 
 - link:
-    # omitted source directory uses the same link directory without the dot
+    # xdg-config
     ~/.config/alacritty: config/alacritty
+    # auto starting application
     ~/.config/autostart: config/autostart
+    #
     ~/.config/bat: config/bat
     ~/.config/fontconfig: config/fontconfig
     ~/.config/gammastep: config/gammastep
@@ -35,6 +37,11 @@
     ~/.config/xarchiver: config/xarchiver
     ~/.config/zathura: config/zathura
     ~/.config/zsh: config/zsh
+    # user overrides (binaries and desktop files)
+    ~/.local/bin: local/bin
+    ~/.local/share/applications: local/share/applications
+    # home directory
+    ~/.pam_environment: pam_environment
 
 # - shell:
 

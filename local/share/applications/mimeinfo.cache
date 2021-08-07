@@ -1,0 +1,5 @@
+[MIME Cache]
+application/x-visual-studio-code-workspace=visual-studio-code.desktop;
+inode/directory=visual-studio-code.desktop;
+text/plain=visual-studio-code.desktop;
+x-scheme-handler/vsls=vsls-launcher.desktop;

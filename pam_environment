@@ -1,0 +1,20 @@
+# Bin Path
+PATH   OVERRIDE=@{HOME}/.local/bin:/opt/android-sdk/build-tools
+
+# config directory
+XDG_CONFIG_HOME    OVERRIDE=@{HOME}/.config
+ZDOTDIR    OVERRIDE=@{HOME}/.config/zsh
+
+
+# grimshot
+XDG_SCREENSHOTS_DIR     OVERRIDE=@{HOME}/hdd-pictures/screenshots
+
+# wayland stuff
+MOZ_ENABLE_WAYLAND=1
+QT_QPA_PLATFORM=wayland
+QT_QPA_PLATFORMTHEME=qt5ct
+QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+XDG_CURRENT_DESKTOP=sway
+
+# neovim
+EDITOR=nvim
