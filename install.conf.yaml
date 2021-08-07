@@ -12,9 +12,29 @@
       recursive: true
 
 - link:
-    ~/.config/alacritty: alacritty
-    ~/.config/bat: bat
-    ~/.config/git: git
+    # omitted source directory uses the same link directory without the dot
+    ~/.config/alacritty: config/alacritty
+    ~/.config/autostart: config/autostart
+    ~/.config/bat: config/bat
+    ~/.config/fontconfig: config/fontconfig
+    ~/.config/gammastep: config/gammastep
+    ~/.config/git: config/git
+    ~/.config/gtk-3.0: config/gtk-3.0
+    ~/.config/htop: config/htop
+    ~/.config/i3status-rust: config/i3status-rust
+    ~/.config/Kvantum: config/Kvantum
+    ~/.config/libfm: config/libfm
+    ~/.config/mako: config/mako
+    ~/.config/mpv: config/mpv
+    ~/.config/pcmanfm: config/pcmanfm
+    ~/.config/qBittorrent: config/qBittorrent
+    ~/.config/qt5ct: config/qt5ct
+    ~/.config/sway: config/sway
+    ~/.config/sworkstyle: config/sworkstyle
+    ~/.config/waybar: config/waybar
+    ~/.config/xarchiver: config/xarchiver
+    ~/.config/zathura: config/zathura
+    ~/.config/zsh: config/zsh
 
 # - shell:
 

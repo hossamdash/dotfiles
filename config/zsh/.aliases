@@ -1,0 +1,10 @@
+# add space after elevation to make the shell check the next command with aliases
+alias sudo='sudo '
+alias doas='doas '
+alias ls='exa -l'
+alias v='nvim'
+alias c='chezmoi'
+alias cv='chezmoi edit'
+alias py='python'
+alias man="man --pager 'nvim +Man!' "
+alias update="paru;flatpak upgrade;sdkmanager --update;flutter upgrade" 

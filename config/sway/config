@@ -1,0 +1,338 @@
+######## Autostart ########
+
+# always executed on reload
+exec_always {
+    # wayland gtk theme workarounds
+    import-gsettings.sh
+    # set default mic volume
+    pactl set-source-volume @DEFAULT_SOURCE@ 20%
+}
+
+# execute once when sway starts
+exec {
+
+    # wob sockets to show visualization
+    mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --background-color "#FF000000" \
+        --border-color "#FFFFFFFF" --bar-color "#FF03BAFC" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
+    mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --background-color "#FF000000" \
+        --border-color "#FFFFFFFF" --bar-color "#FFFCBA03" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
+    
+    # Gammastep
+    gtk-launch gammastep
+
+    # Autotiling
+    # autotiling -w 2
+
+    # Polkit agent
+    gtk-launch polkit-gnome-authentication-agent-1
+
+    # Autostart xdg directories
+    xdg-autostart-launcher --both
+
+    # Swayidle and Swaylockch
+    swayidle -w \
+        timeout 300 'brightnessctl set 10% -s' resume 'brightnessctl -r' \
+        timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+        before-sleep 'swaylock -f -c 000000' \
+        idlehint 900
+    
+    # per window keyboard layout
+    swaykbdd
+
+    # per workspace auto generated icons
+    sworkstyle &> /tmp/sworkstyle.log
+    
+    # clipboard
+    wl-paste -t text --watch clipman store
+}
+
+
+######## Output configuration ########
+
+# Decorations
+default_border pixel 3
+# gaps
+gaps inner 10
+gaps outer -5
+# smart_borders no_gaps
+smart_gaps on
+# # no window borders adjacent to screen edge
+# # and no title bar in tabbed or stacked layout if single child
+hide_edge_borders --i3 smart
+# focus under mouse
+# focus_follows_mouse always
+# xwayland focus test?
+# focus_on_window_activation smart
+
+# try to force mouse size
+# seat * xcursor_theme Adwaita 12
+
+# Screen Scaling
+output eDP-1 scale 1.25
+# title
+title_align center
+# Hide cursor after 60 seconds
+seat * hide_cursor 60000
+seat * keyboard_grouping none
+
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /mnt/Lenovo/Home/Pictures/wallpapers/pixel-dragonkeep.png fill
+
+# floating Windows 
+for_window {
+    [title="Firefox — Sharing Indicator"] floating enable, sticky enable, move position 94 ppt 93 ppt
+    [title="\ -\ Connection\ Details$"] floating enable, sticky enable
+    [title="Emulator"] floating enable, border none
+    [title="Android Emulator "] floating enable, border none
+}
+
+# workspace_layout tabbed
+
+######## Input configuration ########
+
+# Touchpad 
+input 2:7:SynPS/2_Synaptics_TouchPad {
+tap enabled
+tap_button_map lmr
+natural_scroll enabled
+accel_profile adaptive
+}
+
+# Mouse
+set $MOUSE 6127:24696:Lenovo_Lenovo_Y_Gaming_Precision_Mouse
+input $MOUSE {
+accel_profile flat
+}
+
+# Keyboard Config
+exec swaykbdd
+input 1:1:AT_Translated_Set_2_keyboard {
+xkb_layout "us,ara"
+xkb_options grp:win_space_toggle,caps:escape_shifted_capslock
+xkb_numlock enabled
+}
+
+
+######## Variables ########
+
+set {
+    # win key
+    $mod Mod4
+    # alt key
+    $mod2 Mod1
+
+    # default apps
+    $browser firefox
+    $file_manager ranger
+    $term Alacritty
+    $term2 alacritty
+    $sys_monitor htop
+    $media_player mpv
+    $code_editor code-oss
+
+    # vim directions
+    $vim_left h
+    $vim_down j
+    $vim_up k
+    $vim_right l
+
+    # launch menu style
+    $highlight #3daee9
+    $menu bemenu -i -p "launch ▶" -H 30 --tf "$highlight" --hf "$highlight" \
+        --sf "$highlight" --scf "$highlight" --fn "Hack Regular 12"
+    # Run Prompt 
+    $desktop_menu j4-dmenu-desktop --dmenu='$menu' --term=alacritty \
+        --use-xdg-de --no-generic | xargs swaymsg exec --
+}
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+
+######## Keyboard Bindings ########
+
+bindsym --to-code {
+
+    ### Default apps ###
+    # quick access shortcut
+    $mod+KP_Enter exec gtk-launch $file_manager /mnt/Lenovo/Projects/graduation
+    # Start a terminal
+    $mod+Return exec gtk-launch $term
+    # Open sway settings
+    $mod+Comma exec gtk-launch $code_editor ~/.config/sway/config
+    # Start browser
+    $mod+f exec gtk-launch $browser
+    # Private browsing session firefox
+    $mod+n exec $browser -private-window
+    # Start File Manager
+    $mod+r exec gtk-launch $file_manager
+    # Start Code Editor
+    $mod+c exec gtk-launch $code_editor
+    # Start System Monitor
+    $mod+Backslash exec gtk-launch $sys_monitor
+    # Start Media Player
+    $mod+m exec gtk-launch $media_player
+
+    # desktop menu (bemenu + j4-menu-desktop)
+    $mod+a exec $desktop_menu
+    # .local/bin/bepower
+    $mod+Shift+q exec bepower.sh -m '$menu'
+    # clipboard pick
+    $mod+v exec clipman pick --tool bemenu \
+        -T'-i -n -l 5 --fn "Hack Regular 12" -p "clipboard" --scrollbar autohide' 
+    
+    # screenshots
+    Print exec grimshot --notify copy area
+    $mod+Print exec grimshot --notify copy window
+    Shift+Print exec grimshot --notify save area
+    $mod+Shift+Print exec grimshot --notify save window
+
+    ### Sway jargon ###
+    # Reload the configuration file
+    $mod+Shift+c reload
+    # Resize mode
+    $mod+Shift+r mode "resize"
+    # Kill focused window
+    $mod+q kill
+    
+    # Layouts	
+    # $mod+s layout stacking
+    $mod+l layout toggle split tabbed
+    $mod+t layout tabbed
+    # Fullscreen
+    $mod+F1 fullscreen
+    # Hide waybar
+    $mod+b exec killall -SIGUSR1 waybar
+    # Toggle the current focus between tiling and floating mode
+    $mod+Grave floating toggle
+    # Swap focus between the tiling area and the floating area
+    $mod2+Grave focus mode_toggle
+    # Move focused window to scratchpad
+    $mod+Shift+minus move scratchpad
+    # switch-show applications in the scratchpad
+    $mod+minus scratchpad show
+
+    # Move your focus around the output screen
+    $mod+Up focus up
+    $mod+Down focus down
+    $mod+Left focus left
+    $mod+Right focus right
+
+    # Move the focused window around the output
+    $mod+Shift+Up move up
+    $mod+Shift+Down move down
+    $mod+Shift+Left move left
+    $mod+Shift+Right move right
+
+    # Switch to previous and next workspaces
+    $mod+w exec traverse_workspace.sh prev workspace
+    $mod+s exec traverse_workspace.sh next workspace
+    # Switch between the most recent workspaces
+    $mod2+Tab workspace back_and_forth
+    # $mod2+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
+
+    # Same with arrow keys
+    $mod+Shift+w exec traverse_workspace.sh prev container
+    $mod+Shift+s exec traverse_workspace.sh next container
+
+    # Switch to workspace
+    $mod+1 workspace number 1
+    $mod+2 workspace number 2
+    $mod+3 workspace number 3
+    $mod+4 workspace number 4
+    $mod+5 workspace number 5
+    $mod+6 workspace number 6
+    $mod+7 workspace number 7
+
+    # Follow focused container to workspacee
+    $mod+Shift+1 move container to workspace number 1, workspace number 1
+    $mod+Shift+2 move container to workspace number 2, workspace number 2
+    $mod+Shift+3 move container to workspace number 3, workspace number 3
+    $mod+Shift+4 move container to workspace number 4, workspace number 4
+    $mod+Shift+5 move container to workspace number 5, workspace number 5
+    $mod+Shift+6 move container to workspace number 6, workspace number 6
+    $mod+Shift+7 move container to workspace number 7, workspace number 7
+
+    # volume and brightness
+    XF86AudioRaiseVolume exec pamixer --unmute --increase 2 && pamixer --get-volume > $SWAYSOCK.audio
+    Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125
+    XF86AudioLowerVolume exec pamixer --unmute --decrease 2 && pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio ) || pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
+    XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
+}
+
+
+######## Modes ########
+
+# Resize mode
+mode "resize" {
+    # left and down decrease - right and up increase
+    bindsym --to-code {
+        $vim_left resize shrink width 20px
+        $vim_down resize grow height 20px
+        $vim_up resize shrink height 20px
+        $vim_right resize grow width 20px
+
+        # Return to default mode
+        Return mode "default"
+        Escape mode "default"
+    }
+}
+
+
+######## Bars ########
+
+# i3status-rs
+bar {
+    id 1
+    position top
+    height 30
+    status_command i3status-rs
+    workspace_min_width 50
+    # strip_workspace_numbers yes
+    font pango:Hack, Font Awesome 5 Free 10
+    status_padding 0
+    status_edge_padding 0
+    bindsym {
+        # diable vertical scrolling
+        # button4 nop
+        # button5 nop
+        # diable horizontal scrolling
+        # button6 nop
+        # button7 nop
+        # close on middle click
+        --release button2 kill
+    }
+    # tray_bindsym {
+    #     button1 Activate
+    #     button3 ContextMenu
+    # }
+    colors {
+        separator #666666
+        background #222222aa
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
+} 
+
+# # waybar
+# bar {
+#     id 2
+#     swaybar_command waybar
+# }
+
+
+######## Include external files ########
+# systemd related variables
+include /etc/sway/config.d/*
+# configuration drop-ins
+include ~/.config/sway/config.d/*
