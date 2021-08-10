@@ -3,10 +3,9 @@ background_opacity: 0.9
 
 #reflow: false
 font:
-  size: 13
+  size: 13.0
   normal:
     family: "MesloLGS NF"
-
 window:
   padding:
     x: 2
@@ -16,4 +15,4 @@ window:
 cursor:
   style:
     shape: Beam
-  vi_mode_style: Block
+    vi_mode_style: None

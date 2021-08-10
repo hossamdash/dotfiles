@@ -1,7 +1,7 @@
 # add space after elevation to make the shell check the next command with aliases
 alias sudo='sudo '
 alias doas='doas '
-alias ls='exa -l'
+alias ls='exa -l --group-directories-first'
 alias v='nvim'
 alias c='chezmoi'
 alias cv='chezmoi edit'

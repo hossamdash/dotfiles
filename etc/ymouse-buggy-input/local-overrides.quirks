@@ -1,0 +1,5 @@
+[Buggy Lenovo Y Gaming Mouse Input]
+MatchBus=usb
+MatchUdevType=keyboard
+MatchProduct=0x6078
+AttrEventCodeDisable=EV_KEY:0xF0

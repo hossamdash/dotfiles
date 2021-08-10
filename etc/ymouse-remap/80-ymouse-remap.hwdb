@@ -1,0 +1,6 @@
+evdev:input:b0003v17EFp6078*
+ KEYBOARD_KEY_90005=btn_middle
+
+
+evdev:input:b0003v17EFp6078*
+ KEYBOARD_KEY_90003=btn_extra
