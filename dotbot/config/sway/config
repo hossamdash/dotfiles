@@ -12,16 +12,19 @@ exec_always {
 exec {
 
     # wob sockets to show visualization
-    mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --background-color "#FF000000" \
-        --border-color "#FFFFFFFF" --bar-color "#FF03BAFC" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
-    mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --background-color "#FF000000" \
-        --border-color "#FFFFFFFF" --bar-color "#FFFCBA03" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
+    mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --background-color "#000000FF" \
+        --border-color "#FFFFFFFF" --bar-color "#4287f5FF" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
+    mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --background-color "#000000FF" \
+        --border-color "#FFFFFFFF" --bar-color "#FCBA03FF" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
     
     # Gammastep
     gtk-launch gammastep
 
     # Autotiling
     # autotiling -w 2
+    
+    # per workspace auto generated icons
+    sworkstyle &> /tmp/sworkstyle.log
 
     # Polkit agent
     gtk-launch polkit-gnome-authentication-agent-1
@@ -39,8 +42,6 @@ exec {
     # per window keyboard layout
     swaykbdd
 
-    # per workspace auto generated icons
-    sworkstyle &> /tmp/sworkstyle.log
     
     # clipboard
     wl-paste -t text --watch clipman store
