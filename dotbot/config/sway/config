@@ -19,12 +19,10 @@ exec {
     
     # Gammastep
     gtk-launch gammastep
-
-    # Autotiling
-    # autotiling -w 2
     
     # per workspace auto generated icons
-    sworkstyle &> /tmp/sworkstyle.log
+    # sworkstyle &> /tmp/sworkstyle.log
+    sworkstyle 
 
     # Polkit agent
     gtk-launch polkit-gnome-authentication-agent-1
