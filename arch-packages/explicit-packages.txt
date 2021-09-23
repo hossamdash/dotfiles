@@ -1,4 +1,5 @@
 alacritty
+alsa-utils
 android-udev
 arc-gtk-theme
 arc-icon-theme
@@ -9,10 +10,12 @@ bemenu
 blueman
 bluez
 bluez-utils
+bottom
 bridge-utils
 brightnessctl
 btrfs-progs
 calc
+chromium
 cmatrix
 code
 cups
@@ -46,9 +49,9 @@ kvantum-qt5
 libappindicator-gtk3
 libva-utils
 libvirt
-linux
 linux-firmware
 linux-lts
+linux-zen
 lsof
 lxappearance-gtk3
 mako
@@ -89,6 +92,7 @@ ranger
 refind
 snapper
 strace
+swappy
 sway
 swayidle
 swaylock
@@ -124,3 +128,4 @@ zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
+base-devel
