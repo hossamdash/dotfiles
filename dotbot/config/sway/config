@@ -1,15 +1,13 @@
 ######## Autostart ########
 
-# always executed on reload
-exec_always {
-    # wayland gtk theme workarounds
-    import-gsettings.sh
-    # set default mic volume
-    pactl set-source-volume @DEFAULT_SOURCE@ 20%
-}
-
 # execute once when sway starts
 exec {
+
+    # per workspace auto generated icons
+    sworkstyle &> /tmp/sworkstyle.log
+
+    # per window keyboard layout
+    swaykbdd
 
     # wob sockets to show visualization
     mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --background-color "#000000FF" \
@@ -20,10 +18,6 @@ exec {
     # Gammastep
     gtk-launch gammastep
     
-    # per workspace auto generated icons
-    # sworkstyle &> /tmp/sworkstyle.log
-    sworkstyle 
-
     # Polkit agent
     gtk-launch polkit-gnome-authentication-agent-1
 
@@ -37,14 +31,17 @@ exec {
         before-sleep 'swaylock -f -c 000000' \
         idlehint 900
     
-    # per window keyboard layout
-    swaykbdd
-
-    
     # clipboard
     wl-paste -t text --watch clipman store
 }
 
+# always executed on reload
+exec_always {
+    # wayland gtk theme workarounds
+    import-gsettings.sh
+    # set default mic volume
+    pactl set-source-volume @DEFAULT_SOURCE@ 20%
+}
 
 ######## Output configuration ########
 
@@ -205,7 +202,9 @@ bindsym --to-code {
     # Fullscreen
     $mod+F1 fullscreen
     # Hide waybar
-    $mod+b exec killall -SIGUSR1 waybar
+    # $mod+b exec killall -SIGUSR1 waybar
+    # hide sway-bar
+    $mod+b bar mode toggle
     # Toggle the current focus between tiling and floating mode
     $mod+Grave floating toggle
     # Swap focus between the tiling area and the floating area
