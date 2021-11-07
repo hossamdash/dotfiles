@@ -1,0 +1,8 @@
+# large english letters
+figlet
+
+# hacker man
+cmatrix
+
+# indicator that i never had a GF
+neofetch

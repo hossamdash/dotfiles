@@ -1,4 +1,0 @@
-# command line archiver
-atool
-# spell checker
-aspell

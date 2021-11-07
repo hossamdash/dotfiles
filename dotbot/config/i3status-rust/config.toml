@@ -59,6 +59,7 @@ interval = 5
 [[block]]
 block = "sound"
 max_vol = 100
+headphones_indicator = true
 
 # [[block]]
 # block = "backlight"
@@ -75,7 +76,7 @@ info = 50
 
 [[block]]
 block = "time"
-interval = 60
+interval = 20
 format = "%a-%j %d/%m/%y %I:%M %p"
 
 [[block]]

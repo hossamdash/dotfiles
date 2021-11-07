@@ -1,0 +1,12 @@
+# wayland input testing
+evtest
+wev
+
+# intel libva hardware accelration info
+libva-utils
+# intel vulkan driver debugging
+vulkan-tools
+
+# system
+lsof
+strace

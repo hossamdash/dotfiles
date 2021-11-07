@@ -22,13 +22,13 @@ exec {
     gtk-launch polkit-gnome-authentication-agent-1
 
     # Autostart xdg directories
-    xdg-autostart-launcher --both
+    xdg-autostart-launcher --user
 
     # Swayidle and Swaylockch
     swayidle -w \
         timeout 300 'brightnessctl set 10% -s' resume 'brightnessctl -r' \
         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000' \
+        before-sleep 'swaylock --daemonize --show-failed-attempts --image "/home/hossam/HDD/hdd-pictures/wallpapers/summer-vibes.jpg" ' \
         idlehint 900
     
     # clipboard
@@ -69,10 +69,11 @@ output eDP-1 scale 1.25
 title_align center
 # Hide cursor after 60 seconds
 seat * hide_cursor 60000
+# seat * hide_cursor when-typing enable
 seat * keyboard_grouping none
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /mnt/Lenovo/Home/Pictures/wallpapers/pixel-dragonkeep.png fill
+output * bg /mnt/Lenovo/Home/Pictures/wallpapers/light-mountains.jpg fill
 
 # floating Windows 
 for_window {
@@ -119,7 +120,7 @@ set {
 
     # default apps
     $browser firefox
-    $file_manager ranger
+    $file_manager pcmanfm-qt
     $term Alacritty
     $term2 alacritty
     $sys_monitor htop
@@ -161,11 +162,11 @@ bindsym --to-code {
     # Open sway settings
     $mod+Comma exec gtk-launch $code_editor ~/.config/sway/config
     # Start browser
-    $mod+f exec gtk-launch $browser
+    $mod+w exec gtk-launch $browser
     # Private browsing session firefox
-    $mod+n exec $browser -private-window
+    $mod+Shift+w exec $browser -private-window
     # Start File Manager
-    $mod+r exec gtk-launch $file_manager
+    $mod+f exec gtk-launch $file_manager
     # Start Code Editor
     $mod+c exec gtk-launch $code_editor
     # Start System Monitor
@@ -227,15 +228,15 @@ bindsym --to-code {
     $mod+Shift+Right move right
 
     # Switch to previous and next workspaces
-    $mod+w exec traverse_workspace.sh prev workspace
-    $mod+s exec traverse_workspace.sh next workspace
+    # $mod+w exec traverse_workspace.sh prev workspace
+    # $mod+s exec traverse_workspace.sh next workspace
     # Switch between the most recent workspaces
     $mod2+Tab workspace back_and_forth
     # $mod2+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
 
     # Same with arrow keys
-    $mod+Shift+w exec traverse_workspace.sh prev container
-    $mod+Shift+s exec traverse_workspace.sh next container
+    # $mod+Shift+w exec traverse_workspace.sh prev container
+    # $mod+Shift+s exec traverse_workspace.sh next container
 
     # Switch to workspace
     $mod+1 workspace number 1

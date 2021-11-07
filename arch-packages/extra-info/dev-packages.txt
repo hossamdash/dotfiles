@@ -1,0 +1,21 @@
+## python
+# linter
+flake8
+# gui qt applications
+pyside2
+# python pacakge manager
+python-pip
+# matplotlib GUI
+tk
+# formatter
+python-black
+
+
+## arduino
+arduino-cli
+
+## java
+# JDK
+jdk-openjdk
+# view source files for libraries
+openjdk-src

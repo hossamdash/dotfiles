@@ -1,0 +1,9 @@
+## intel
+
+
+# hardware accelration
+intel-media-driver
+
+# microcode
+intel-ucode
+
