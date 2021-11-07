@@ -10,10 +10,10 @@ exec {
     swaykbdd
 
     # wob sockets to show visualization
+    mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --background-color "#000000FF" \
+        --border-color "#FFFFFFFF" --bar-color "#FCBA03FF" --anchor 'top' --anchor 'center' --margin 50 --width 320 --height 40
     mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --background-color "#000000FF" \
         --border-color "#FFFFFFFF" --bar-color "#4287f5FF" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
-    mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --background-color "#000000FF" \
-        --border-color "#FFFFFFFF" --bar-color "#FCBA03FF" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
     
     # Gammastep
     gtk-launch gammastep
@@ -102,7 +102,6 @@ accel_profile flat
 }
 
 # Keyboard Config
-exec swaykbdd
 input 1:1:AT_Translated_Set_2_keyboard {
 xkb_layout "us,ara"
 xkb_options grp:win_space_toggle,caps:escape_shifted_capslock
@@ -257,9 +256,9 @@ bindsym --to-code {
     $mod+Shift+7 move container to workspace number 7, workspace number 7
 
     # volume and brightness
-    XF86AudioRaiseVolume exec pamixer --unmute --increase 2 && pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioRaiseVolume exec pamixer --unmute --increase 5 && pamixer --get-volume > $SWAYSOCK.audio
     Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125
-    XF86AudioLowerVolume exec pamixer --unmute --decrease 2 && pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioLowerVolume exec pamixer --unmute --decrease 5 && pamixer --get-volume > $SWAYSOCK.audio
     XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio ) || pamixer --get-volume > $SWAYSOCK.audio
     XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
