@@ -1,5 +1,5 @@
 # /dev/sda5
-# UUID=824B-F99D      	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=824B-F99D      	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
 # /dev/sda6
 UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/         	btrfs     	rw,noatime,nodiratime,compress=zstd:3,ssd,space_cache,commit=120,subvol=@	0 0
@@ -17,4 +17,4 @@ UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/home/.snapshots     	btrfs     	rw,
 UUID=ab3fd042-5357-41c6-bde0-876f9ab380ec	none      	swap      	defaults  	0 0
 
 # /dev/sdb5
-UUID="D0703879703867FC"				/mnt/Lenovo	ntfs		nosuid,nodev,nofail		0 0
+UUID="D0703879703867FC"				/mnt/Lenovo	ntfs3		nosuid,nodev,nofail,x-gvfs-show		0 0

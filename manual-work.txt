@@ -1,0 +1,2 @@
+setup printing
+run sensorsdetect

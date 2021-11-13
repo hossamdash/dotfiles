@@ -31,3 +31,4 @@ wl-color-picker
 wob
 wofi-emoji-git
 xdg-utils-handlr
+base-devel

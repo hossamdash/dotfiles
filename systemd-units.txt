@@ -1,0 +1,23 @@
+### system units ###
+# services
+bluetooth
+greetd
+lmsensors
+NetworkManager
+system76-power
+
+# sockets
+cups
+libvirtd
+
+# timers
+fstrim
+paccache
+plocate-updatedb
+snapper-cleanup
+snapper-timeline
+
+### user units ###
+# services
+xdg-user-dirs-update
+wireplumber
