@@ -1,2 +1,3 @@
 setup printing
 run sensorsdetect
+restart or modprobe the sound module for subwoofer
