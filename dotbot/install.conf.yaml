@@ -25,10 +25,8 @@
     ~/.config/htop: config/htop
     ~/.config/i3status-rust: config/i3status-rust
     ~/.config/Kvantum: config/Kvantum
-    ~/.config/libfm: config/libfm
     ~/.config/mako: config/mako
     ~/.config/mpv: config/mpv
-    ~/.config/pcmanfm: config/pcmanfm
     ~/.config/qBittorrent: config/qBittorrent
     ~/.config/qt5ct: config/qt5ct
     ~/.config/sway: config/sway
