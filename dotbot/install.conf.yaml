@@ -14,9 +14,9 @@
 - link:
     # xdg-config
     ~/.config/alacritty: config/alacritty
+    ~/.config/retroarch: config/retroarch
     # auto starting application
     ~/.config/autostart: config/autostart
-    #
     ~/.config/bat: config/bat
     ~/.config/fontconfig: config/fontconfig
     ~/.config/gammastep: config/gammastep
@@ -35,6 +35,9 @@
     ~/.config/xarchiver: config/xarchiver
     ~/.config/zathura: config/zathura
     ~/.config/zsh: config/zsh
+    ~/.config/chromium-flags.conf: config/chromium-flags.conf
+    ~/.config/mimeapps.list: config/mimeapps.list
+    ~/.config/user-dirs.dirs: config/user-dirs.dirs
     # user overrides (binaries and desktop files)
     ~/.local/bin: local/bin
     ~/.local/share/applications: local/share/applications

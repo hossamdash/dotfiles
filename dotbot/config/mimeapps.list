@@ -1,0 +1,17 @@
+[Added Associations]
+application/x-trash=nvim.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-BYAKC1.desktop;
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop;
+application/xml=nvim.desktop;
+image/jpeg=imv-folder.desktop;
+image/png=imv-folder.desktop;
+inode/directory=pcmanfm-qt.desktop;
+text/*=nvim.desktop;
+text/plain=nvim.desktop;
+video/*=mpv.desktop;
+x-scheme-handler/http=chromium.desktop;
+x-scheme-handler/https=chromium.desktop;
+x-scheme-handler/terminal=Alacritty.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-BYAKC1.desktop;

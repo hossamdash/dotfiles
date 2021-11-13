@@ -1,0 +1,36 @@
+[INFO] === Build =======================================
+[INFO] CPU Model Name: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+[INFO] Capabilities:  MMX MMXEXT SSE SSE2 SSE3 SSSE3 SSE4 SSE4.2 AES AVX AVX2
+[INFO] Built: Nov 11 2021
+[INFO] Version: 1.9.13
+[INFO] Git: 1280151d13
+[INFO] =================================================
+[WARN] [GL]: Stock GLSL shaders will be used.
+[INFO] === Build =======================================
+[INFO] CPU Model Name: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+[INFO] Capabilities:  MMX MMXEXT SSE SSE2 SSE3 SSSE3 SSE4 SSE4.2 AES AVX AVX2
+[INFO] Built: Nov 11 2021
+[INFO] Version: 1.9.13
+[INFO] Git: 1280151d13
+[INFO] =================================================
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port1.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port2.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port3.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port4.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port5.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port6.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port7.gun_chairs
+
+[WARN] [Environ]: SET_MESSAGE_EXT: unhandled setting UI: psx.input.port8.gun_chairs
+
+[libretro WARN] Firmware found but has invalid SHA1: /home/hossam/.config/retroarch/system/scph5501.bin
+[libretro WARN] Expected SHA1: 0555C6FAE8906F3F09BAF5988F00E55F88E9F30B
+[libretro WARN] Obtained SHA1: 96880D1CA92A016FF054BE5159BB06FE03CB4E14
+[libretro WARN] Unsupported firmware may cause emulation glitches.
+[WARN] [Environ]: SET_MESSAGE_EXT: Slow CD image read detected: consider using async or precache CD Access Method
