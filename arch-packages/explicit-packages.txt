@@ -44,6 +44,7 @@ iptables-nft
 jdk-openjdk
 kvantum-qt5
 libappindicator-gtk3
+libretro-beetle-psx-hw
 libretro-snes9x
 libva-utils
 linux-firmware
@@ -62,10 +63,10 @@ networkmanager
 nnn
 noto-fonts
 noto-fonts-emoji
-ntfs-3g
 opendoas
 openjdk-src
 otf-font-awesome
+p7zip
 pacman-contrib
 pamixer
 pavucontrol
@@ -79,6 +80,7 @@ pipewire-pulse
 plocate
 polkit-gnome
 power-profiles-daemon
+powertop
 pyside2
 python-black
 python-pip
@@ -88,6 +90,8 @@ qt5-wayland
 qt5ct
 refind
 retroarch
+retroarch-assets-glui
+retroarch-assets-ozone
 simple-scan
 snapper
 strace
@@ -95,6 +99,7 @@ swappy
 sway
 swayidle
 swaylock
+swtpm
 telegram-desktop
 terminus-font
 tk
@@ -109,13 +114,14 @@ unzip
 usbutils
 virt-manager
 vulkan-intel
+vulkan-mesa-layers
 vulkan-tools
 waybar
-weechat
 wf-recorder
 wireplumber
 wl-clipboard
 xarchiver
+xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xorg-xeyes

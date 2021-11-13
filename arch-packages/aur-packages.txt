@@ -12,11 +12,13 @@ handlr-bin
 ideapad-cm
 j4-dmenu-desktop
 ly
+nwg-drawer
 opendoas-sudo
 paru-bin
 pipewire-jack-dropin
 samsung-unified-driver
 sandsmark-xdg-autostart-launcher-git
+scrcpy
 swaykbdd
 sworkstyle
 system76-power
@@ -25,6 +27,7 @@ ttf-meslo-nerd-font-powerlevel10k
 ttf-ms-fonts
 vitetris
 wev
+wl-color-picker
 wob
-xdg-desktop-portal-gtk-gnomefree
+wofi-emoji-git
 xdg-utils-handlr
