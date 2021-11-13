@@ -24,11 +24,11 @@ exec {
     # Autostart xdg directories
     xdg-autostart-launcher --user
 
-    # Swayidle and Swaylockch
+    # Swayidle and Swaylock
     swayidle -w \
         timeout 300 'brightnessctl set 10% -s' resume 'brightnessctl -r' \
         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock --daemonize --show-failed-attempts --image "/home/hossam/HDD/hdd-pictures/wallpapers/summer-vibes.jpg" ' \
+        before-sleep 'swaylock --daemonize --show-failed-attempts --image "/mnt/Lenovo/Home/Pictures/wallpapers/summer-vibes.jpg" ' \
         idlehint 900
     
     # clipboard
@@ -41,6 +41,8 @@ exec_always {
     import-gsettings.sh
     # set default mic volume
     pactl set-source-volume @DEFAULT_SOURCE@ 20%
+    # cache application launcher (nwg-drawer)
+    nwg-drawer -r -fm pcmanfm-qt -nocats -nofs &> /tmp/nwg-drawer.log
 }
 
 ######## Output configuration ########
@@ -67,13 +69,15 @@ hide_edge_borders --i3 smart
 output eDP-1 scale 1.25
 # title
 title_align center
+# cursor theme 
+seat * xcursor_theme Adwaita 24
 # Hide cursor after 60 seconds
 seat * hide_cursor 60000
 # seat * hide_cursor when-typing enable
 seat * keyboard_grouping none
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /mnt/Lenovo/Home/Pictures/wallpapers/light-mountains.jpg fill
+output * bg /mnt/Lenovo/Home/Pictures/wallpapers/blue-night.jpg fill
 
 # floating Windows 
 for_window {
@@ -118,8 +122,9 @@ set {
     $mod2 Mod1
 
     # default apps
-    $browser firefox
+    $browser chromium
     $file_manager pcmanfm-qt
+    $cli_file_manager nnn
     $term Alacritty
     $term2 alacritty
     $sys_monitor htop
@@ -155,7 +160,7 @@ bindsym --to-code {
 
     ### Default apps ###
     # quick access shortcut
-    $mod+KP_Enter exec gtk-launch $file_manager /mnt/Lenovo/Projects/graduation
+    $mod+KP_Enter exec gtk-launch $cli_file_manager
     # Start a terminal
     $mod+Return exec gtk-launch $term
     # Open sway settings
@@ -163,11 +168,13 @@ bindsym --to-code {
     # Start browser
     $mod+w exec gtk-launch $browser
     # Private browsing session firefox
-    $mod+Shift+w exec $browser -private-window
+    # $mod+Shift+w exec $browser -private-window
+    # Private browsing session chromium
+    $mod+Shift+w exec $browser --incognito
     # Start File Manager
     $mod+f exec gtk-launch $file_manager
     # Start Code Editor
-    $mod+c exec gtk-launch $code_editor
+    $mod+KP_Divide exec gtk-launch $code_editor
     # Start System Monitor
     $mod+Backslash exec gtk-launch $sys_monitor
     # Start Media Player
@@ -175,12 +182,17 @@ bindsym --to-code {
 
     # desktop menu (bemenu + j4-menu-desktop)
     $mod+a exec $desktop_menu
+    # desktop menu (nwg-drawr)
+    $mod+Shift+a exec pkill -USR1 nwg-drawer
     # .local/bin/bepower
     $mod+Shift+q exec bepower.sh -m '$menu'
     # clipboard pick
     $mod+v exec clipman pick --tool bemenu \
         -T'-i -n -l 5 --fn "Hack Regular 12" -p "clipboard" --scrollbar autohide' 
-    
+    # color picker
+    $mod+c exec gtk-launch wl-color-picker
+    # emoji picker
+    $mod+period exec wofi-emoji
     # screenshots
     Print exec grimshot --notify copy area
     $mod+Print exec grimshot --notify copy window
@@ -294,7 +306,7 @@ bar {
     status_command i3status-rs
     workspace_min_width 50
     # strip_workspace_numbers yes
-    font pango:Hack, Font Awesome 5 Free 10
+    font pango:Hack, Font Awesome 5 Free 10.5
     status_padding 0
     status_edge_padding 0
     bindsym {
@@ -312,12 +324,12 @@ bar {
     #     button3 ContextMenu
     # }
     colors {
-        separator #666666
-        background #222222aa
+        # separator #666666
+        background #222d32
         statusline #dddddd
-        focused_workspace #0088CC #0088CC #ffffff
+        focused_workspace #435f7b #435f7b #ffffff
         active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
+        inactive_workspace #222d32 #222d32 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
 } 

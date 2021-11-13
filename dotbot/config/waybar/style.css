@@ -12,7 +12,6 @@ window#waybar {
     background-color: transparent;
     color: #ffffff;
     /* Use box-shadow instead of border so the text isn't offset */
-    font-size: 25px;
 }
 
 #workspaces button.focused {
