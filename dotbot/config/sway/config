@@ -122,7 +122,8 @@ set {
     $mod2 Mod1
 
     # default apps
-    $browser chromium
+    # $browser chromium
+    $browser firefox
     $file_manager pcmanfm-qt
     $cli_file_manager nnn
     $term Alacritty
@@ -168,9 +169,9 @@ bindsym --to-code {
     # Start browser
     $mod+w exec gtk-launch $browser
     # Private browsing session firefox
-    # $mod+Shift+w exec $browser -private-window
+    $mod+Shift+w exec $browser -private-window
     # Private browsing session chromium
-    $mod+Shift+w exec $browser --incognito
+    # $mod+Shift+w exec $browser --incognito
     # Start File Manager
     $mod+f exec gtk-launch $file_manager
     # Start Code Editor

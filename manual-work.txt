@@ -1,3 +1,4 @@
 setup printing
 run sensorsdetect
 restart or modprobe the sound module for subwoofer
+install easy effects flatpak
