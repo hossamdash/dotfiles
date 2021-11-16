@@ -1,1 +1,1 @@
-grep -vxFf base-devel.txt all-epackages.txt > explicit-packages.txt
+grep -vxFf base-devel.txt all-explicit-packages.txt > explicit-packages.txt

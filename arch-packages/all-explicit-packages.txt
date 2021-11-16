@@ -4,9 +4,13 @@ arc-gtk-theme
 arc-icon-theme
 archlinux-menus
 arduino-cli
+autoconf
+automake
 base
 bat
 bemenu
+binutils
+bison
 blueman
 bluez
 bluez-utils
@@ -25,11 +29,14 @@ dnsmasq
 edk2-ovmf
 evtest
 exa
+fakeroot
 figlet
 firefox
 flake8
 flatpak
+flex
 gammastep
+gcc
 git
 github-cli
 gnome-dictionary
@@ -55,6 +62,8 @@ linux-lts
 linux-zen
 lsof
 lxappearance-gtk3
+m4
+make
 mako
 man-db
 man-pages
@@ -73,6 +82,7 @@ otf-font-awesome
 p7zip
 pacman-contrib
 pamixer
+patch
 pavucontrol
 pbzip2
 pcmanfm-qt
@@ -81,6 +91,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+pkgconf
 plocate
 polkit-gnome
 power-profiles-daemon
@@ -108,6 +119,7 @@ swaylock
 swtpm
 telegram-desktop
 terminus-font
+texinfo
 tk
 tldr
 trash-cli
@@ -124,6 +136,7 @@ vulkan-mesa-layers
 vulkan-tools
 waybar
 wf-recorder
+which
 wireplumber
 wl-clipboard
 xarchiver

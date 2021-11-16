@@ -3,8 +3,11 @@ code-features
 code-marketplace
 czkawka-gui-bin
 dashbinsh
+dict-foldoc
+dict-wn
 dotbot
 downgrade
+gebaar-libinput-fork
 greetd
 greetd-tuigreet
 grimshot
