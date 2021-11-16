@@ -33,6 +33,9 @@ exec {
     
     # clipboard
     wl-paste -t text --watch clipman store
+
+    # touchpad gestures
+    gebaard -b
 }
 
 # always executed on reload
@@ -73,7 +76,7 @@ title_align center
 seat * xcursor_theme Adwaita 24
 # Hide cursor after 60 seconds
 seat * hide_cursor 60000
-# seat * hide_cursor when-typing enable
+seat * hide_cursor when-typing enable
 seat * keyboard_grouping none
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -95,14 +98,21 @@ for_window {
 input 2:7:SynPS/2_Synaptics_TouchPad {
 tap enabled
 tap_button_map lmr
+dwt enabled
+# events disabled_on_external_mouse
 natural_scroll enabled
+# postive value
+scroll_factor .5
 accel_profile adaptive
 }
 
 # Mouse
 set $MOUSE 6127:24696:Lenovo_Lenovo_Y_Gaming_Precision_Mouse
 input $MOUSE {
+# left_handed enabled
 accel_profile flat
+# [-1, 1]
+pointer_accel -.5
 }
 
 # Keyboard Config
@@ -131,12 +141,6 @@ set {
     $sys_monitor htop
     $media_player mpv
     $code_editor code-oss
-
-    # vim directions
-    $vim_left h
-    $vim_down j
-    $vim_up k
-    $vim_right l
 
     # launch menu style
     $highlight #3daee9
@@ -196,8 +200,8 @@ bindsym --to-code {
     $mod+period exec wofi-emoji
     # screenshots
     Print exec grimshot --notify copy area
-    $mod+Print exec grimshot --notify copy window
     Shift+Print exec grimshot --notify save area
+    $mod+Print exec grimshot --notify copy window
     $mod+Shift+Print exec grimshot --notify save window
 
     ### Sway jargon ###
@@ -233,6 +237,8 @@ bindsym --to-code {
     $mod+Left focus left
     $mod+Right focus right
 
+    # super tap switch between applications
+    # TODO
     # Move the focused window around the output
     $mod+Shift+Up move up
     $mod+Shift+Down move down
@@ -240,15 +246,16 @@ bindsym --to-code {
     $mod+Shift+Right move right
 
     # Switch to previous and next workspaces
-    # $mod+w exec traverse_workspace.sh prev workspace
-    # $mod+s exec traverse_workspace.sh next workspace
-    # Switch between the most recent workspaces
-    $mod2+Tab workspace back_and_forth
-    # $mod2+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
-
+    $mod+Control+Left exec traverse_workspace.sh prev workspace
+    $mod+Control+Right exec traverse_workspace.sh next workspace
+    
     # Same with arrow keys
-    # $mod+Shift+w exec traverse_workspace.sh prev container
-    # $mod+Shift+s exec traverse_workspace.sh next container
+    $mod+Shift+Control+Left exec traverse_workspace.sh prev container
+    $mod+Shift+Control+Right exec traverse_workspace.sh next container
+    
+    # Switch between the most recent workspaces
+    # $mod2+Tab workspace back_and_forth
+    # $mod2+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
 
     # Switch to workspace
     $mod+1 workspace number 1
@@ -280,21 +287,27 @@ bindsym --to-code {
 
 
 ######## Modes ########
+# set {
+#     # vim directions
+#     $vim_left h
+#     $vim_down j
+#     $vim_up k
+#     $vim_right l
+# }
+# # Resize mode
+# mode "resize" {
+#     # left and down decrease - right and up increase
+#     bindsym --to-code {
+#         $vim_left resize shrink width 20px
+#         $vim_down resize grow height 20px
+#         $vim_up resize shrink height 20px
+#         $vim_right resize grow width 20px
 
-# Resize mode
-mode "resize" {
-    # left and down decrease - right and up increase
-    bindsym --to-code {
-        $vim_left resize shrink width 20px
-        $vim_down resize grow height 20px
-        $vim_up resize shrink height 20px
-        $vim_right resize grow width 20px
-
-        # Return to default mode
-        Return mode "default"
-        Escape mode "default"
-    }
-}
+#         # Return to default mode
+#         Return mode "default"
+#         Escape mode "default"
+#     }
+# }
 
 
 ######## Bars ########

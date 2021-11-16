@@ -1,10 +1,10 @@
 #!/bin/sh
 
-CUR_WORKSPACE=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused)' | jq -r '.current_workspace')
+CUR_WORKSPACE=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused)' | jq -r '.current_workspace' | awk -F':' '{print $1}')
 
-if [ $1 == "prev" ]; then
+if [ $1 = "prev" ]; then
     TO_WORKSPACE=$(expr $CUR_WORKSPACE - 1)
-elif [ $1 == "next" ]; then
+elif [ $1 = "next" ]; then
     TO_WORKSPACE=$(expr $CUR_WORKSPACE + 1)
 fi
 
@@ -16,9 +16,9 @@ elif [ $TO_WORKSPACE -eq 0 ]; then
 fi
 
 #switch or move containers
-if [ $2 == "container" ]; then
+if [ $2 = "container" ]; then
     swaymsg move container to workspace number $TO_WORKSPACE
     swaymsg workspace number $TO_WORKSPACE
-elif [ $2 == "workspace" ]; then
+elif [ $2 = "workspace" ]; then
     swaymsg workspace number $TO_WORKSPACE
 fi
