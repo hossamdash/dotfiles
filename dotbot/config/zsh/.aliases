@@ -3,8 +3,7 @@ alias sudo='sudo '
 alias doas='doas '
 alias ls='exa -l --group-directories-first'
 alias v='nvim'
-alias c='chezmoi'
-alias cv='chezmoi edit'
 alias py='python'
 alias man="man --pager 'nvim +Man!' "
-alias update="paru;flatpak upgrade;sdkmanager --update;flutter upgrade" 
+alias hide="unset HISTFILE"
+

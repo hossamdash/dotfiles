@@ -12,7 +12,11 @@
       recursive: true
 
 - link:
-    # xdg-config
+    # home
+    ~/.profile: profile
+    
+
+    # .config
     ~/.config/alacritty: config/alacritty
     ~/.config/retroarch: config/retroarch
     # auto starting application
@@ -32,17 +36,13 @@
     ~/.config/sway: config/sway
     ~/.config/sworkstyle: config/sworkstyle
     ~/.config/waybar: config/waybar
-    ~/.config/xarchiver: config/xarchiver
     ~/.config/zathura: config/zathura
     ~/.config/zsh: config/zsh
     ~/.config/chromium-flags.conf: config/chromium-flags.conf
     ~/.config/mimeapps.list: config/mimeapps.list
     ~/.config/user-dirs.dirs: config/user-dirs.dirs
-    # user overrides (binaries and desktop files)
+    
+    # .local
     ~/.local/bin: local/bin
     ~/.local/share/applications: local/share/applications
-    # home directory
-    ~/.pam_environment: pam_environment
-
-# - shell:
 

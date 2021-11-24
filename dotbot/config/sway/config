@@ -26,16 +26,19 @@ exec {
 
     # Swayidle and Swaylock
     swayidle -w \
-        timeout 300 'brightnessctl set 10% -s' resume 'brightnessctl -r' \
-        timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+        timeout 600 'brightnessctl set 10% -s' resume 'brightnessctl -r' \
+        timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock --daemonize --show-failed-attempts --image "/mnt/Lenovo/Home/Pictures/wallpapers/summer-vibes.jpg" ' \
-        idlehint 900
+        idlehint 1800
     
     # clipboard
     wl-paste -t text --watch clipman store
 
     # touchpad gestures
     gebaard -b
+
+    # low power notificationsn
+    poweralerd
 }
 
 # always executed on reload
@@ -104,12 +107,13 @@ natural_scroll enabled
 # postive value
 scroll_factor .5
 accel_profile adaptive
+pointer_accel .2
 }
 
 # Mouse
 set $MOUSE 6127:24696:Lenovo_Lenovo_Y_Gaming_Precision_Mouse
 input $MOUSE {
-# left_handed enabled
+left_handed enabled
 accel_profile flat
 # [-1, 1]
 pointer_accel -.5
@@ -128,17 +132,13 @@ xkb_numlock enabled
 set {
     # win key
     $mod Mod4
-    # alt key
-    $mod2 Mod1
 
     # default apps
-    # $browser chromium
-    $browser firefox
     $file_manager pcmanfm-qt
-    $cli_file_manager nnn
+    $cli_file_manager ranger
     $term Alacritty
     $term2 alacritty
-    $sys_monitor htop
+    $sys_monitor btop
     $media_player mpv
     $code_editor code-oss
 
@@ -170,18 +170,18 @@ bindsym --to-code {
     $mod+Return exec gtk-launch $term
     # Open sway settings
     $mod+Comma exec gtk-launch $code_editor ~/.config/sway/config
-    # Start browser
-    $mod+w exec gtk-launch $browser
-    # Private browsing session firefox
-    $mod+Shift+w exec $browser -private-window
-    # Private browsing session chromium
-    # $mod+Shift+w exec $browser --incognito
+    # Firefox
+    $mod+w exec gtk-launch firefox
+    $mod+Shift+w exec firefox -private-window
+    # Chromium
+    $mod+Alt+w exec gtk-launch chromium
+    $mod+Alt+Shift+w exec chromium --incognito
     # Start File Manager
     $mod+f exec gtk-launch $file_manager
     # Start Code Editor
     $mod+KP_Divide exec gtk-launch $code_editor
     # Start System Monitor
-    $mod+Backslash exec gtk-launch $sys_monitor
+    $mod+Backslash exec $term2 -e btop
     # Start Media Player
     $mod+m exec gtk-launch $media_player
 
@@ -225,7 +225,7 @@ bindsym --to-code {
     # Toggle the current focus between tiling and floating mode
     $mod+Grave floating toggle
     # Swap focus between the tiling area and the floating area
-    $mod2+Grave focus mode_toggle
+    Alt+Grave focus mode_toggle
     # Move focused window to scratchpad
     $mod+Shift+minus move scratchpad
     # switch-show applications in the scratchpad
@@ -254,8 +254,8 @@ bindsym --to-code {
     $mod+Shift+Control+Right exec traverse_workspace.sh next container
     
     # Switch between the most recent workspaces
-    # $mod2+Tab workspace back_and_forth
-    # $mod2+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
+    # Alt+Tab workspace back_and_forth
+    # Alt+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
 
     # Switch to workspace
     $mod+1 workspace number 1
