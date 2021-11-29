@@ -1,5 +1,7 @@
 ### system units ###
 # services
+systemd-timesyncd
+systemd-oomd
 bluetooth
 greetd
 lmsensors

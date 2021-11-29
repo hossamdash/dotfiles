@@ -5,12 +5,12 @@
 # homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
 # absolute path. No other format is supported.
 # 
-XDG_DOWNLOAD_DIR="$HOME/HDD/downloads"
-XDG_DOCUMENTS_DIR="$HOME/HDD/documents"
-XDG_MUSIC_DIR="$HOME/HDD/music"
-XDG_PICTURES_DIR="$HOME/HDD/pictures"
-XDG_VIDEOS_DIR="$HOME/HDD/videos"
-XDG_DESKTOP_DIR="$HOME/Desktop"
+XDG_DOWNLOAD_DIR="/mnt/Lenovo/Home/Downloads"
+XDG_VIDEOS_DIR="/mnt/Lenovo/Home/Videos"
+XDG_MUSIC_DIR="/mnt/Lenovo/Home/Music"
+XDG_PICTURES_DIR="/mnt/Lenovo/Home/Pictures"
+XDG_SCREENSHOTS_DIR="/mnt/Lenovo/Home/Pictures/screenshots"
+XDG_DESKTOP_DIR="/mnt/Lenovo/Home/Desktop"
+XDG_DOCUMENTS_DIR="$HOME/Documents"
 XDG_TEMPLATES_DIR="$HOME/Templates"
 XDG_PUBLICSHARE_DIR="$HOME/Public"
-XDG_SCREENSHOTS_DIR="$HOME/HDD/pictures/screenshots"

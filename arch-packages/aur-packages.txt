@@ -1,3 +1,4 @@
+airshipper
 clipman
 code-features
 code-marketplace
@@ -12,13 +13,15 @@ greetd
 greetd-tuigreet
 grimshot
 handlr-bin
-ideapad-cm
+ipman
 j4-dmenu-desktop
 ly
 nwg-drawer
 opendoas-sudo
 paru-bin
 pipewire-jack-dropin
+poweralertd
+ranger-git
 samsung-unified-driver
 sandsmark-xdg-autostart-launcher-git
 scrcpy

@@ -12,6 +12,7 @@ bluez
 bluez-utils
 bridge-utils
 brightnessctl
+btop
 btrfs-progs
 calc
 chromium
@@ -23,9 +24,12 @@ dictd
 dmidecode
 dnsmasq
 edk2-ovmf
+espeak-ng
 evtest
 exa
+exfatprogs
 figlet
+file-roller
 firefox
 flake8
 flatpak
@@ -49,7 +53,6 @@ libappindicator-gtk3
 libretro-beetle-psx-hw
 libretro-snes9x
 libva-utils
-linux
 linux-firmware
 linux-lts
 linux-zen
@@ -58,12 +61,12 @@ lxappearance-gtk3
 mako
 man-db
 man-pages
+mesa-demos
 mpv
 ncdu
 neofetch
 neovim
 networkmanager
-nnn
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
@@ -101,6 +104,7 @@ simple-scan
 smartmontools
 snapper
 strace
+supertuxkart
 swappy
 sway
 swayidle
@@ -110,11 +114,13 @@ telegram-desktop
 terminus-font
 tk
 tldr
+translate-shell
 trash-cli
 tree
 ttf-dejavu
 ttf-fira-code
 ttf-hack
+udiskie
 unrar
 unzip
 usbutils
@@ -126,7 +132,6 @@ waybar
 wf-recorder
 wireplumber
 wl-clipboard
-xarchiver
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs

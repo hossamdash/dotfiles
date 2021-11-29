@@ -38,7 +38,10 @@ exec {
     gebaard -b
 
     # low power notificationsn
-    poweralerd
+    poweralertd
+
+    # automount 
+    udiskie
 }
 
 # always executed on reload
@@ -79,7 +82,7 @@ title_align center
 seat * xcursor_theme Adwaita 24
 # Hide cursor after 60 seconds
 seat * hide_cursor 60000
-seat * hide_cursor when-typing enable
+# seat * hide_cursor when-typing enable
 seat * keyboard_grouping none
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -88,6 +91,7 @@ output * bg /mnt/Lenovo/Home/Pictures/wallpapers/blue-night.jpg fill
 # floating Windows 
 for_window {
     [title="Firefox — Sharing Indicator"] floating enable, sticky enable, move position 94 ppt 93 ppt
+    [title="xeyes"] floating enable, sticky enable
     [title="\ -\ Connection\ Details$"] floating enable, sticky enable
     [title="Emulator"] floating enable, border none
     [title="Android Emulator "] floating enable, border none
@@ -101,7 +105,7 @@ for_window {
 input 2:7:SynPS/2_Synaptics_TouchPad {
 tap enabled
 tap_button_map lmr
-dwt enabled
+dwt disabled
 # events disabled_on_external_mouse
 natural_scroll enabled
 # postive value
@@ -113,7 +117,7 @@ pointer_accel .2
 # Mouse
 set $MOUSE 6127:24696:Lenovo_Lenovo_Y_Gaming_Precision_Mouse
 input $MOUSE {
-left_handed enabled
+# left_handed enabled
 accel_profile flat
 # [-1, 1]
 pointer_accel -.5
