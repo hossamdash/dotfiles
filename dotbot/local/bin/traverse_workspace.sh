@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CUR_WORKSPACE=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused)' | jq -r '.current_workspace' | awk -F':' '{print $1}')
+CUR_WORKSPACE=$(swaymsg -t "get_workspaces" | jq -r '.[] | select(.focused)' | jq -r '.name' | awk -F':' '{print $1}')
 
 if [ $1 = "prev" ]; then
     TO_WORKSPACE=$(expr $CUR_WORKSPACE - 1)

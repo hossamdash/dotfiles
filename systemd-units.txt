@@ -1,14 +1,15 @@
 ### system units ###
 # services
+iwd.service
 systemd-timesyncd
 systemd-oomd
 bluetooth
 greetd
 lmsensors
-NetworkManager
 system76-power
 
 # sockets
+systemd-networkd
 cups
 libvirtd
 

@@ -8,7 +8,6 @@ dict-foldoc
 dict-wn
 dotbot
 downgrade
-gebaar-libinput-fork
 greetd
 greetd-tuigreet
 grimshot
@@ -22,9 +21,8 @@ paru-bin
 pipewire-jack-dropin
 poweralertd
 ranger-git
-samsung-unified-driver
 sandsmark-xdg-autostart-launcher-git
-scrcpy
+sway-audio-idle-inhibit-git
 swaykbdd
 sworkstyle
 system76-power

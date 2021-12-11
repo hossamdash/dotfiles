@@ -6,6 +6,7 @@ wev
 libva-utils
 # intel vulkan driver debugging
 vulkan-tools
+mesa-demos
 
 # system
 lsof

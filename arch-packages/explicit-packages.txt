@@ -24,6 +24,7 @@ dictd
 dmidecode
 dnsmasq
 edk2-ovmf
+efibootmgr
 espeak-ng
 evtest
 exa
@@ -34,6 +35,7 @@ firefox
 flake8
 flatpak
 gammastep
+ghostscript
 git
 github-cli
 gnome-dictionary
@@ -41,16 +43,20 @@ gnome-themes-extra
 gvfs
 gvfs-mtp
 hdparm
+helvum
 htop
 i3status-rust
 imv
+intel-gpu-tools
 intel-media-driver
 intel-ucode
 iptables-nft
+iwd
 jdk-openjdk
 kvantum-qt5
 libappindicator-gtk3
 libretro-beetle-psx-hw
+libretro-play
 libretro-snes9x
 libva-utils
 linux-firmware
@@ -66,7 +72,6 @@ mpv
 ncdu
 neofetch
 neovim
-networkmanager
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
@@ -85,6 +90,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 plocate
+polkit
 polkit-gnome
 power-profiles-daemon
 powertop
@@ -95,11 +101,12 @@ qbittorrent
 qemu
 qt5-wayland
 qt5ct
-refind
 reflector
 retroarch
 retroarch-assets-glui
 retroarch-assets-ozone
+sane-airscan
+scrcpy
 simple-scan
 smartmontools
 snapper
@@ -110,6 +117,7 @@ sway
 swayidle
 swaylock
 swtpm
+system-config-printer
 telegram-desktop
 terminus-font
 tk
@@ -137,7 +145,6 @@ xdg-desktop-portal-wlr
 xdg-user-dirs
 xorg-xeyes
 xorg-xwayland
-youtube-dl
 yt-dlp
 zathura
 zathura-pdf-mupdf

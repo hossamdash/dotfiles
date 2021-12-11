@@ -16,7 +16,7 @@ exec {
         --border-color "#FFFFFFFF" --bar-color "#4287f5FF" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
     
     # Gammastep
-    gtk-launch gammastep
+    gammastep
     
     # Polkit agent
     gtk-launch polkit-gnome-authentication-agent-1
@@ -35,13 +35,16 @@ exec {
     wl-paste -t text --watch clipman store
 
     # touchpad gestures
-    gebaard -b
+    # gebaard -b
 
     # low power notificationsn
     poweralertd
 
     # automount 
     udiskie
+    
+    # Enables inhibit_idle when playing audio
+    sway-audio-idle-inhibit
 }
 
 # always executed on reload
@@ -51,7 +54,7 @@ exec_always {
     # set default mic volume
     pactl set-source-volume @DEFAULT_SOURCE@ 20%
     # cache application launcher (nwg-drawer)
-    nwg-drawer -r -fm pcmanfm-qt -nocats -nofs &> /tmp/nwg-drawer.log
+    nwg-drawer -r -nocats -nofs
 }
 
 ######## Output configuration ########
@@ -207,6 +210,8 @@ bindsym --to-code {
     Shift+Print exec grimshot --notify save area
     $mod+Print exec grimshot --notify copy window
     $mod+Shift+Print exec grimshot --notify save window
+    # xorg xeyes
+    $mod+x exec xeyes
 
     ### Sway jargon ###
     # Reload the configuration file
@@ -214,6 +219,7 @@ bindsym --to-code {
     # Resize mode
     $mod+Shift+r mode "resize"
     # Kill focused window
+    # $mod+q exec quit_or_shutdown.sh
     $mod+q kill
     
     # Layouts	
@@ -229,7 +235,7 @@ bindsym --to-code {
     # Toggle the current focus between tiling and floating mode
     $mod+Grave floating toggle
     # Swap focus between the tiling area and the floating area
-    Alt+Grave focus mode_toggle
+    # Alt+Grave focus mode_toggle
     # Move focused window to scratchpad
     $mod+Shift+minus move scratchpad
     # switch-show applications in the scratchpad

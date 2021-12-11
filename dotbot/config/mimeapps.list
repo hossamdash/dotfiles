@@ -1,6 +1,7 @@
 [Added Associations]
 application/x-trash=nvim.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-BYAKC1.desktop;
+image/jpeg=firefox.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;

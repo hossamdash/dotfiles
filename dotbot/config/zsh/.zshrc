@@ -5,25 +5,30 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+# History
 HISTFILE=${XDG_CONFIG_HOME}/zsh/.zhistory
 HISTSIZE=1000
-SAVEHIST=10000
+SAVEHIST=100000
+
+
+# rehash on SIG1; Completions pacman
+TRAPUSR1() { rehash }
 
 # -e emacs, -v vim
-bindkey -v
+bindkey -e
 bindkey '^R' history-incremental-search-backward
 
 # completions
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' menu select
 source ${XDG_CONFIG_HOME}/zsh/.arduino-completion.zsh
 
 # Aliases
 source ${XDG_CONFIG_HOME}/zsh/.aliases
-setopt COMPLETE_ALIASES
 
-# create a zkbd compatible hash;
-# to add other keys to this hash, see: man 5 terminfo
+# bind some buttons to do nice stuff
 typeset -g -A key
 
 key[Home]="${terminfo[khome]}"
@@ -63,6 +68,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
+
 # Subcommand history search
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -78,50 +84,33 @@ key[Control-Right]="${terminfo[kRIT5]}"
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 
-# Keep a stack of history directories
-#autoload -Uz add-zsh-hook
 
-#DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirs"
-#if [[ -f "$DIRSTACKFILE" ]] && (( ${#dirstack} == 0 )); then
-#	dirstack=("${(@f)"$(< "$DIRSTACKFILE")"}")
-#	[[ -d "${dirstack[1]}" ]] && cd -- "${dirstack[1]}"
-#fi
-#chpwd_dirstack() {
-#	print -l -- "$PWD" "${(u)dirstack[@]}" > "$DIRSTACKFILE"
-#}
-#add-zsh-hook -Uz chpwd chpwd_dirstack
-
-#DIRSTACKSIZE='20'
-
-#setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
-
-## Remove duplicate entries
-#setopt PUSHD_IGNORE_DUPS
-
-## This reverts the +/- operators.
-#setopt PUSHD_MINUS
-
-# Command not found package name
-command_not_found_handler() {
-	local pkgs cmd="$1" files=()
-	printf 'zsh: command not found: %s' "$cmd" # print command not found asap, then search for packages
-	files=(${(f)"$(pacman -F --machinereadable -- "/usr/bin/${cmd}")"})
-	if (( ${#files[@]} )); then
-		printf '\r%s may be found in the following packages:\n' "$cmd"
-		local res=() repo package version file
-		for file in "$files[@]"; do
-			res=("${(0)file}")
-			repo="$res[1]"
-			package="$res[2]"
-			version="$res[3]"
-			file="$res[4]"
-			printf '  %s/%s %s: /%s\n' "$repo" "$package" "$version" "$file"
-		done
-	else
-		printf '\n'
-	fi
-	return 127
+function command_not_found_handler {
+    local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
+    printf 'zsh: command not found: %s\n' "$1"
+    local entries=(
+        ${(f)"$(/usr/bin/pacman -F --machinereadable -- "/usr/bin/$1")"}
+    )
+    if (( ${#entries[@]} ))
+    then
+        printf "${bright}$1${reset} may be found in the following packages:\n"
+        local pkg
+        for entry in "${entries[@]}"
+        do
+            # (repo package version file)
+            local fields=(
+                ${(0)entry}
+            )
+            if [[ "$pkg" != "${fields[2]}" ]]
+            then
+                printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
+            fi
+            printf '    /%s\n' "${fields[4]}"
+            pkg="${fields[2]}"
+        done
+    fi
 }
+
 
 # sourcing downloaded packages
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
