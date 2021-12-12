@@ -19,6 +19,7 @@ paccache
 plocate-updatedb
 snapper-cleanup
 snapper-timeline
+logrotate
 
 ### user units ###
 # services

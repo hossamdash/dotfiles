@@ -13,6 +13,7 @@ greetd-tuigreet
 grimshot
 handlr-bin
 ipman
+iwgtk
 j4-dmenu-desktop
 ly
 nwg-drawer

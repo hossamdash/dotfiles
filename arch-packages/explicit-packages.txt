@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 arc-gtk-theme
 arc-icon-theme
+arch-install-scripts
 archlinux-menus
 arduino-cli
 base
@@ -37,6 +38,7 @@ flatpak
 gammastep
 ghostscript
 git
+git-delta
 github-cli
 gnome-dictionary
 gnome-themes-extra
@@ -62,6 +64,7 @@ libva-utils
 linux-firmware
 linux-lts
 linux-zen
+logrotate
 lsof
 lxappearance-gtk3
 mako
