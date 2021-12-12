@@ -191,11 +191,11 @@ bindsym --to-code {
     $mod+Backslash exec $term2 -e btop
     # Start Media Player
     $mod+m exec gtk-launch $media_player
-
     # desktop menu (bemenu + j4-menu-desktop)
-    $mod+a exec $desktop_menu
+    $mod+a exec wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%
     # desktop menu (nwg-drawr)
-    $mod+Shift+a exec pkill -USR1 nwg-drawer
+    # $mod+Shift+a exec pkill -USR1 nwg-drawer
+    $mod+Shift+a exec $desktop_menu
     # .local/bin/bepower
     $mod+Shift+q exec bepower.sh -m '$menu'
     # clipboard pick

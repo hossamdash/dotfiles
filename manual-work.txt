@@ -2,3 +2,8 @@ setup printing
 run sensorsdetect
 restart or modprobe the sound module for subwoofer
 install easy effects flatpak
+# firefox
+disable pocket
+hardware accelration
+browser.tabs.loadBookmarksInBackground
+

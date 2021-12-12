@@ -4,6 +4,6 @@ alias doas='doas '
 alias ls='exa -l --group-directories-first'
 alias v='nvim'
 alias py='python'
-alias man="man --pager 'nvim +Man!' "
+alias man="man --pager 'nvim +Man!'"
 alias hide="unset HISTFILE"
-
+alias hp="journalctl -p 3 -xb"
