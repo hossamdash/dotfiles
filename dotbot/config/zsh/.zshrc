@@ -126,3 +126,4 @@ else
   [[ ! -f ${XDG_CONFIG_HOME}/zsh/.tty-p10k.zsh ]] || source ${XDG_CONFIG_HOME}/zsh/.tty-p10k.zsh
 fi
 
+

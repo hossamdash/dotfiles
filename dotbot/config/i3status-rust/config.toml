@@ -37,7 +37,6 @@ format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "net"
-on_click = "gtk-launch iwgtk"
 format = "{speed_down;M*B} {speed_up;M*B}"
 interval = 1
 
