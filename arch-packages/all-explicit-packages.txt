@@ -84,6 +84,7 @@ mpv
 ncdu
 neofetch
 neovim
+nnn
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
@@ -115,7 +116,6 @@ qbittorrent
 qemu
 qt5-wayland
 qt5ct
-refind
 reflector
 retroarch
 retroarch-assets-glui

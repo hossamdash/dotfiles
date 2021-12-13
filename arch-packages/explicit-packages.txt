@@ -75,6 +75,7 @@ mpv
 ncdu
 neofetch
 neovim
+nnn
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
