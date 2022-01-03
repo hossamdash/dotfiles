@@ -1,0 +1,17 @@
+## intel
+
+
+# hardware accelration
+intel-media-driver
+intel-media-sdk
+
+# microcode
+intel-ucode
+
+## nvidia
+
+# out of tree driver
+
+nvidia-utils-nvlax
+nvidia
+nvidia-prime

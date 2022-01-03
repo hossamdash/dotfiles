@@ -3,6 +3,7 @@ figlet
 
 # hacker man
 cmatrix
+sl
 
 # indicator that i never had a GF
 neofetch

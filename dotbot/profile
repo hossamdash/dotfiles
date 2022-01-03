@@ -1,5 +1,5 @@
 # append local bin to the front of path
-export PATH=.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
 # config directory
 export XDG_CONFIG_HOME=$HOME/.config

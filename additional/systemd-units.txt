@@ -7,6 +7,7 @@ bluetooth
 greetd
 lmsensors
 system76-power
+nvidia-suspend
 
 # sockets
 systemd-networkd

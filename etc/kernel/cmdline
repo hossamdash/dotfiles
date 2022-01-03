@@ -1,1 +1,1 @@
-rw root=UUID=ef9adfdb-3101-40ec-8acb-4b8caf602839 rootflags=subvol=@ quiet udev.log_level=3 vt.global_cursor_default=0 nowatchdog bgrt_disable
+rw root=UUID=ef9adfdb-3101-40ec-8acb-4b8caf602839 rootflags=subvol=@ quiet udev.log_level=3 vt.global_cursor_default=0 nowatchdog bgrt_disable acpi_osi=! "acpi_osi=Windows 2015"

@@ -71,7 +71,7 @@ interval = 1
 [[block]]
 block = "sound"
 max_vol = 100
-# driver = "alsa"
+# driver = "pulseaudio"
 on_click = "pavucontrol"
 headphones_indicator = true
 

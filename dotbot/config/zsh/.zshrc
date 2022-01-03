@@ -58,6 +58,8 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 [[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
 [[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}"  reverse-menu-complete
 
+bindkey '^H' backward-kill-word
+
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
@@ -126,3 +128,4 @@ else
   [[ ! -f ${XDG_CONFIG_HOME}/zsh/.tty-p10k.zsh ]] || source ${XDG_CONFIG_HOME}/zsh/.tty-p10k.zsh
 fi
 
+eval "$(mcfly init zsh)"
