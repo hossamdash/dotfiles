@@ -1,0 +1,17 @@
+{
+    "ISOs": {
+        "save_path": "/mnt/Lenovo/Misc/ISO-files"
+    },
+    "Movies": {
+        "save_path": "/mnt/Lenovo/Home/Videos/movies"
+    },
+    "Music": {
+        "save_path": "/mnt/Lenovo/Home/Music"
+    },
+    "Series": {
+        "save_path": "/mnt/Lenovo/Home/Videos/series"
+    },
+    "Temp": {
+        "save_path": "/mnt/Lenovo/Home/Videos/temp"
+    }
+}

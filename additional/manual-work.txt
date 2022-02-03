@@ -6,4 +6,4 @@ install easy effects flatpak
 disable pocket
 hardware accelration
 browser.tabs.loadBookmarksInBackground
-
+copy remote configs into their folders

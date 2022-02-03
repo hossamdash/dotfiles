@@ -8,8 +8,9 @@ fi
 
 # History
 HISTFILE=${XDG_CONFIG_HOME}/zsh/.zhistory
-HISTSIZE=1000
-SAVEHIST=100000
+setopt INC_APPEND_HISTORY
+HISTSIZE=10000
+SAVEHIST=1000000000
 
 
 # rehash on SIG1; Completions pacman

@@ -1,4 +1,4 @@
-background_opacity: 0.9
+
 #working_directory: "/mnt/Lenovo/College/4th-year-CSE/2nd-Term/3_network-programming/personal/pracitcal"
 
 #reflow: false
@@ -7,6 +7,7 @@ font:
   normal:
     family: "MesloLGS NF"
 window:
+  opacity: 0.6
   padding:
     x: 4
     y: 10

@@ -143,8 +143,12 @@ bindsym --to-code {
     XF86AudioRaiseVolume exec pamixer --unmute --increase 5 && pamixer --get-volume > $SWAYSOCK.audio
     Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125
     XF86AudioLowerVolume exec pamixer --unmute --decrease 5 && pamixer --get-volume > $SWAYSOCK.audio
+    Shift+XF86AudioLowerVolume exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio )
+
     XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio ) || pamixer --get-volume > $SWAYSOCK.audio
+    
     XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    
     XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
     XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
 }

@@ -1,0 +1,1 @@
+scrcpy --encoder c2.android.avc.encoder --bit-rate 4M --shortcut-mod lctrl --show-touches

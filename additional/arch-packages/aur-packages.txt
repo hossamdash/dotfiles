@@ -1,13 +1,12 @@
 airshipper
 clipman
-code-features
-code-marketplace
 czkawka-gui-bin
 dashbinsh
 dict-foldoc
 dict-wn
 dotbot
 downgrade
+gopreload-git
 greetd
 greetd-tuigreet
 grimshot
@@ -19,7 +18,6 @@ ly
 nwg-drawer
 opendoas-sudo
 paru-bin
-pipewire-jack-dropin
 poweralertd
 ranger-git
 sandsmark-xdg-autostart-launcher-git
@@ -30,10 +28,13 @@ system76-power
 ttf-mac-fonts
 ttf-meslo-nerd-font-powerlevel10k
 ttf-ms-fonts
+ventoy-bin
 vitetris
 wev
 wl-color-picker
+wlrctl
 wob
 wofi-emoji-git
 xdg-utils-handlr
-base-devel
+xpadneo-dkms
+yt-dlp-drop-in

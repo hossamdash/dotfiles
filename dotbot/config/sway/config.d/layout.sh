@@ -5,6 +5,7 @@ for_window {
     [title="\ -\ Connection\ Details$"] floating enable, sticky enable
     [title="Emulator"] floating enable, border none
     [title="Android Emulator "] floating enable, border none
+    [title="pcmanfm-qt file-roller"] floating enable
 }
 
 

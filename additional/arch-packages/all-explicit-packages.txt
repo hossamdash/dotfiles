@@ -9,6 +9,7 @@ autoconf
 automake
 base
 bat
+beep
 bemenu
 binutils
 bison
@@ -22,12 +23,12 @@ btrfs-progs
 calc
 chromium
 cmatrix
-code
 cups
 dconf-editor
 dictd
 dmidecode
 dnsmasq
+easyeffects
 edk2-ovmf
 efibootmgr
 espeak-ng
@@ -38,6 +39,7 @@ fakeroot
 figlet
 file-roller
 firefox
+fishfight
 flake8
 flatpak
 flex
@@ -47,7 +49,6 @@ ghostscript
 git
 git-delta
 github-cli
-gnome-dictionary
 gnome-themes-extra
 gvfs
 gvfs-mtp
@@ -58,11 +59,12 @@ i3status-rust
 imv
 intel-gpu-tools
 intel-media-driver
+intel-media-sdk
 intel-ucode
 iptables-nft
 iwd
 jdk-openjdk
-kvantum-qt5
+kvantum
 libappindicator-gtk3
 libretro-beetle-psx-hw
 libretro-play
@@ -70,7 +72,10 @@ libretro-snes9x
 libva-utils
 linux-firmware
 linux-lts
+linux-lts-headers
 linux-zen
+linux-zen-headers
+linuxconsole
 logrotate
 lsof
 lxappearance-gtk3
@@ -79,7 +84,8 @@ make
 mako
 man-db
 man-pages
-mesa-demos
+mcfly
+mesa-utils
 mpv
 ncdu
 neofetch
@@ -88,6 +94,9 @@ nnn
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
+nvidia-prime
+nvtop
+obs-studio
 opendoas
 openjdk-src
 otf-font-awesome
@@ -116,6 +125,8 @@ qbittorrent
 qemu
 qt5-wayland
 qt5ct
+qt6ct
+refind
 reflector
 retroarch
 retroarch-assets-glui
@@ -123,9 +134,11 @@ retroarch-assets-ozone
 sane-airscan
 scrcpy
 simple-scan
+sl
 smartmontools
 snapper
 strace
+stress
 supertuxkart
 swappy
 sway
@@ -138,6 +151,7 @@ terminus-font
 texinfo
 tk
 tldr
+torbrowser-launcher
 translate-shell
 trash-cli
 tree
@@ -149,12 +163,13 @@ unrar
 unzip
 usbutils
 virt-manager
+viu
 vulkan-intel
-vulkan-mesa-layers
 vulkan-tools
 waybar
 wf-recorder
 which
+wireless-regdb
 wireplumber
 wl-clipboard
 xdg-desktop-portal-gtk
@@ -165,6 +180,7 @@ xorg-xwayland
 yt-dlp
 zathura
 zathura-pdf-mupdf
+zellij
 zip
 zsh
 zsh-autosuggestions

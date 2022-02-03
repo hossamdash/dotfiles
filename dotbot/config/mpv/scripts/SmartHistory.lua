@@ -1,1 +1,0 @@
-/home/hossam/dev-packages/mpv-scripts/scripts/SmartHistory.lua
