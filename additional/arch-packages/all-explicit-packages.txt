@@ -87,6 +87,7 @@ man-pages
 mcfly
 mesa-utils
 mpv
+nautilus
 ncdu
 neofetch
 neovim
@@ -106,7 +107,6 @@ pamixer
 patch
 pavucontrol
 pbzip2
-pcmanfm-qt
 pigz
 pipewire
 pipewire-alsa

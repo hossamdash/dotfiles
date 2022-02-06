@@ -78,6 +78,7 @@ man-pages
 mcfly
 mesa-utils
 mpv
+nautilus
 ncdu
 neofetch
 neovim
@@ -96,7 +97,6 @@ pacman-contrib
 pamixer
 pavucontrol
 pbzip2
-pcmanfm-qt
 pigz
 pipewire
 pipewire-alsa
@@ -174,3 +174,4 @@ zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
+base-devel

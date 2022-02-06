@@ -34,6 +34,7 @@
     ~/.config/mpv: config/mpv
     ~/.config/qBittorrent: config/qBittorrent
     ~/.config/qt5ct: config/qt5ct
+    ~/.config/qt6ct: config/qt6ct
     ~/.config/sway: config/sway
     ~/.config/sworkstyle: config/sworkstyle
     ~/.config/waybar: config/waybar
@@ -43,6 +44,7 @@
     ~/.config/mimeapps.list: config/mimeapps.list
     ~/.config/user-dirs.dirs: config/user-dirs.dirs
     ~/.config/ranger: config/ranger
+    ~/.config/joshuto: config/joshuto
     
     # .local
     ~/.local/bin: local/bin

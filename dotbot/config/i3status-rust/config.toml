@@ -115,4 +115,4 @@ format = "{layout}"
 [[block]]
 block = "custom"
 command = "echo "
-on_click = "pkill -USR1 nwg-drawer"
+on_click = "wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%"

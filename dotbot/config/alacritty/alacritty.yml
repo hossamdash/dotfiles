@@ -7,7 +7,7 @@ font:
   normal:
     family: "MesloLGS NF"
 window:
-  opacity: 0.6
+  opacity: 0.8
   padding:
     x: 4
     y: 10

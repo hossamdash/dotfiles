@@ -1,7 +1,7 @@
 # i3status-rs
 bar {
     id 1
-    position top
+    position bottom
     height 30
     status_command i3status-rs
     workspace_min_width 50

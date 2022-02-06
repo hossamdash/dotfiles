@@ -14,8 +14,8 @@ handlr-bin
 ipman
 iwgtk
 j4-dmenu-desktop
+joshuto-git
 ly
-nwg-drawer
 opendoas-sudo
 paru-bin
 poweralertd

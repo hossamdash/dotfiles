@@ -3,8 +3,8 @@ set {
     $mod Mod4
 
     # default apps
-    $file_manager pcmanfm-qt
-    $cli_file_manager ranger
+    $file_manager org.gnome.Nautilus.desktop
+    $cli_file_manager joshuto
     $term Alacritty
     $term2 alacritty
     $sys_monitor btop
