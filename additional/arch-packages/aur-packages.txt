@@ -1,5 +1,8 @@
 airshipper
 clipman
+code-features
+code-icons
+code-marketplace
 czkawka-gui-bin
 dashbinsh
 dict-foldoc

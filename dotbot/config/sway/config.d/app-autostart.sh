@@ -51,6 +51,4 @@ exec_always {
     import-gsettings.sh
     # set default mic volume
     pactl set-source-volume @DEFAULT_SOURCE@ 20%
-    # cache application launcher (nwg-drawer)
-    nwg-drawer -r -nocats -nofs
 }

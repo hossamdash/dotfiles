@@ -19,11 +19,13 @@ btrfs-progs
 calc
 chromium
 cmatrix
+code
 cups
 dconf-editor
 dictd
 dmidecode
 dnsmasq
+dust
 easyeffects
 edk2-ovmf
 efibootmgr

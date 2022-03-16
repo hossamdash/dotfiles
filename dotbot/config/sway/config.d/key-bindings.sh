@@ -4,7 +4,7 @@ set {
 
     # default apps
     $file_manager org.gnome.Nautilus.desktop
-    $cli_file_manager joshuto
+    $cli_file_manager ranger
     $term Alacritty
     $term2 alacritty
     $sys_monitor btop

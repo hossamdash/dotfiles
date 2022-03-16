@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Sway - Quiet (using script)
+Comment=An i3-compatible Wayland compositor
+Exec=/usr/share/wayland-sessions/sway-quiet.sh
+Type=Application

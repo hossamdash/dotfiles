@@ -96,13 +96,12 @@ format = "%a-%j %d/%m/%y %I:%M %p"
 
 [[block]]
 block = "toggle"
-
 text = ""
 command_state = "echo"
 command_on = "swaymsg 'inhibit_idle open'"
-icon_on = "eye"
+#icon_on = "eye"
 command_off = "swaymsg 'inhibit_idle none'"
-icon_off = "eye_slash"
+#icon_off = "eye_slash"
 
 [[block]]
 block = "keyboard_layout"

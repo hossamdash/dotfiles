@@ -6,7 +6,7 @@ bar {
     status_command i3status-rs
     workspace_min_width 50
     # strip_workspace_numbers yes
-    font pango:Hack, Font Awesome 5 Free 10.5
+    font pango:Hack, Font Awesome 6 Free 10.5
     status_padding 0
     status_edge_padding 0
     bindsym {
