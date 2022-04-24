@@ -3,13 +3,11 @@ alsa-utils
 arc-gtk-theme
 arc-icon-theme
 arch-install-scripts
-archlinux-menus
 arduino-cli
 base
 bat
 beep
 bemenu
-blueman
 bluez
 bluez-utils
 bridge-utils
@@ -39,11 +37,13 @@ firefox
 fishfight
 flake8
 flatpak
+foot-terminfo
 gammastep
 ghostscript
 git
 git-delta
 github-cli
+glhack
 gnome-themes-extra
 gvfs
 gvfs-mtp
@@ -62,6 +62,7 @@ jdk-openjdk
 kvantum
 libappindicator-gtk3
 libretro-beetle-psx-hw
+libretro-pcsx2
 libretro-play
 libretro-snes9x
 libva-utils
@@ -88,7 +89,10 @@ nnn
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
+nvidia-dkms
 nvidia-prime
+nvidia-settings
+nvidia-utils
 nvtop
 obs-studio
 opendoas
@@ -107,7 +111,6 @@ pipewire-pulse
 plocate
 polkit
 polkit-gnome
-power-profiles-daemon
 powertop
 pyside2
 python-black

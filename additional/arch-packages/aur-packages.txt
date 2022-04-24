@@ -1,4 +1,5 @@
 airshipper
+archlinux-menus
 clipman
 code-features
 code-icons
@@ -7,6 +8,7 @@ czkawka-gui-bin
 dashbinsh
 dict-foldoc
 dict-wn
+doasedit-alternative
 dotbot
 downgrade
 gopreload-git
@@ -24,6 +26,7 @@ paru-bin
 poweralertd
 ranger-git
 sandsmark-xdg-autostart-launcher-git
+sdl12-compat
 sway-audio-idle-inhibit-git
 swaykbdd
 sworkstyle

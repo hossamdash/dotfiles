@@ -77,6 +77,7 @@ bindsym --to-code {
     # Kill focused window
     # $mod+q exec quit_or_shutdown.sh
     $mod+q kill
+    $mod+F4 exec wkill.sh
     
     # Layouts	
     # $mod+s layout stacking
