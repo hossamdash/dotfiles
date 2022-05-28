@@ -4,6 +4,5 @@ include /etc/sway/config.d/*
 # configuration drop-ins
 include ~/.config/sway/config.d/*
 
-# TODO: maybe remove
-# helper shell scripts
-include ~/.config/sway/config.d/scripts/*
+# scripts
+include ~/.config/sway/scripts/*

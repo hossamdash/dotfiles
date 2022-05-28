@@ -3,7 +3,7 @@ set {
     $mod Mod4
 
     # default apps
-    $file_manager org.gnome.Nautilus.desktop
+    $file_manager org.gnome.Nautilus
     $cli_file_manager ranger
     $term Alacritty
     $term2 alacritty
@@ -32,7 +32,7 @@ bindsym --to-code {
     # Start a terminal
     $mod+Return exec gtk-launch $term
     # Open sway settings
-    $mod+Comma exec gtk-launch $code_editor ~/.config/sway/config.d
+    $mod+Comma exec gtk-launch $code_editor ~/.config/sway
     # Firefox
     $mod+w exec gtk-launch firefox
     $mod+Shift+w exec firefox -private-window

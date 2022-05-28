@@ -20,7 +20,7 @@ exec {
     gtk-launch polkit-gnome-authentication-agent-1
 
     # Autostart xdg directories
-    xdg-autostart-launcher --user
+    xdg-autostart-launcher --user &>/dev/null
 
     # Swayidle and Swaylock
     swayidle -w \
@@ -42,13 +42,13 @@ exec {
     udiskie
     
     # Enables inhibit_idle when playing audio
-    sway-audio-idle-inhibit
+    sway-audio-idle-inhibit &>/dev/null
 }
 
 # always executed on reload
 exec_always {
     # wayland gtk theme workarounds
-    import-gsettings.sh
+    # import-gsettings.sh
     # set default mic volume
     pactl set-source-volume @DEFAULT_SOURCE@ 20%
 }

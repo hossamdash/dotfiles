@@ -3,6 +3,8 @@ vitetris
 airshipper
 
 # Repos
+gnome-chess
+gnuchess // engine
 glhack
 fishfight
 supertuxcart

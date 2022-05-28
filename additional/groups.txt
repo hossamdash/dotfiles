@@ -1,1 +1,2 @@
-locate libvirt uucp input wheel adm hossam
+main_user: locate libvirt uucp wheel adm hossam
+greeter: video

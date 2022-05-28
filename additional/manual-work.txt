@@ -7,3 +7,6 @@ disable pocket
 hardware accelration
 browser.tabs.loadBookmarksInBackground
 copy remote configs into their folders
+
+# make ddlm-greetd work as intended
+doas gpasswd -a greeter video

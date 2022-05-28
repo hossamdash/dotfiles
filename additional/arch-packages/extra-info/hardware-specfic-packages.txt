@@ -12,6 +12,8 @@ intel-ucode
 
 # out of tree driver
 
-nvidia-utils-nvlax
-nvidia
+nvidia-dkms
+nvidia-utils
+nvidia-settings
 nvidia-prime
+nvtop

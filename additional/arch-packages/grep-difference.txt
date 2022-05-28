@@ -1,1 +1,0 @@
-grep -vxFf base-devel.txt all-explicit-packages.txt > explicit-packages.txt

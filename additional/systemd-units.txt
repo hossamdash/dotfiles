@@ -6,7 +6,7 @@ systemd-oomd
 bluetooth
 greetd
 lmsensors
-system76-power
+com.system76.PowerDaemon.service
 nvidia-suspend
 
 # sockets

@@ -2,12 +2,16 @@
 evtest
 wev
 
-# intel libva hardware accelration info
+## intel
+# hw accelration
 libva-utils
-# intel vulkan driver debugging
+# debugging
+intel-gpu-tools
 vulkan-tools
-mesa-demos
+mesa-utils
 
 # system
 lsof
 strace
+traceroute
+mtr

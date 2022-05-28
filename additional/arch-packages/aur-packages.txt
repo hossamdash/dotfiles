@@ -12,14 +12,11 @@ doasedit-alternative
 dotbot
 downgrade
 gopreload-git
-greetd
-greetd-tuigreet
 grimshot
 handlr-bin
 ipman
 iwgtk
 j4-dmenu-desktop
-joshuto-git
 ly
 opendoas-sudo
 paru-bin
@@ -42,5 +39,4 @@ wlrctl
 wob
 wofi-emoji-git
 xdg-utils-handlr
-xpadneo-dkms
 yt-dlp-drop-in

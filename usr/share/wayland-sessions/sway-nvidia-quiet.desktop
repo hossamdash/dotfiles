@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Sway with Nvidia - Quiet
 Comment=An i3-compatible Wayland compositor
-Exec=sway &>/dev/null --unsupported-gpu
+Exec=/usr/share/wayland-sessions/sway-nvidia-quiet.sh
 Type=Application
