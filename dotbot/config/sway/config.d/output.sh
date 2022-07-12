@@ -17,7 +17,7 @@ hide_edge_borders --i3 smart
 # seat * xcursor_theme Adwaita 12
 
 # Screen Scaling
-output eDP-1 scale 1.35
+output eDP-1 scale 1.20
 # title
 title_align center
 # cursor theme 

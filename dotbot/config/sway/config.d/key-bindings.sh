@@ -7,7 +7,7 @@ set {
     $cli_file_manager ranger
     $term Alacritty
     $term2 alacritty
-    $sys_monitor btop
+    $sys_monitor htop
     $media_player mpv
     $code_editor code-oss
 
@@ -44,7 +44,7 @@ bindsym --to-code {
     # Start Code Editor
     $mod+KP_Divide exec gtk-launch $code_editor
     # Start System Monitor
-    $mod+Backslash exec $term2 -e btop
+    $mod+Backslash exec gtk-launch $sys_monitor
     # Start Media Player
     $mod+m exec gtk-launch $media_player
     # desktop menu (bemenu + j4-menu-desktop)
@@ -122,15 +122,6 @@ bindsym --to-code {
     # Alt+Tab workspace back_and_forth
     # Alt+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
 
-    # Switch to workspace
-    $mod+1 workspace number 1
-    $mod+2 workspace number 2
-    $mod+3 workspace number 3
-    $mod+4 workspace number 4
-    $mod+5 workspace number 5
-    $mod+6 workspace number 6
-    $mod+7 workspace number 7
-
     # Follow focused container to workspacee
     $mod+Shift+1 move container to workspace number 1, workspace number 1
     $mod+Shift+2 move container to workspace number 2, workspace number 2
@@ -152,4 +143,26 @@ bindsym --to-code {
     
     XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
     XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
+}
+
+bindsym --no-repeat {
+    # Switch to workspace
+    $mod+1 workspace number 1; exec "echo 1 > /tmp/sovpipe"
+    $mod+2 workspace number 2; exec "echo 1 > /tmp/sovpipe"
+    $mod+3 workspace number 3; exec "echo 1 > /tmp/sovpipe"
+    $mod+4 workspace number 4; exec "echo 1 > /tmp/sovpipe"
+    $mod+5 workspace number 5; exec "echo 1 > /tmp/sovpipe"
+    $mod+6 workspace number 6; exec "echo 1 > /tmp/sovpipe"
+    $mod+7 workspace number 7; exec "echo 1 > /tmp/sovpipe"
+}
+
+bindsym --release {
+    # Done switching to workspace to workspace
+    $mod+1 workspace number 1; exec "echo 0 > /tmp/sovpipe"
+    $mod+2 workspace number 2; exec "echo 0 > /tmp/sovpipe"
+    $mod+3 workspace number 3; exec "echo 0 > /tmp/sovpipe"
+    $mod+4 workspace number 4; exec "echo 0 > /tmp/sovpipe"
+    $mod+5 workspace number 5; exec "echo 0 > /tmp/sovpipe"
+    $mod+6 workspace number 6; exec "echo 0 > /tmp/sovpipe"
+    $mod+7 workspace number 7; exec "echo 0 > /tmp/sovpipe"
 }

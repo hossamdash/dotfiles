@@ -23,23 +23,23 @@ show_marks = "visible"
 # aur_command = "paru -Qua"
 # hide_when_uptodate = true
 
-[[block]]
-block = "cpu"
-interval = 1
-format = "{utilization}"
-# format = "{utilization} {boost}"
+# [[block]]
+# block = "cpu"
+# interval = 1
+# format = "{utilization}"
+# # format = "{utilization} {boost}"
 
-[[block]]
-block = "memory"
-display_type = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
+# [[block]]
+# block = "memory"
+# display_type = "memory"
+# format_mem = "{mem_used_percents}"
+# format_swap = "{swap_used_percents}"
 
-[[block]]
-block = "net"
-on_click = "gtk-launch iwgtk"
-format = "{speed_down;M*B} {speed_up;M*B}"
-interval = 1
+# [[block]]
+# block = "net"
+# on_click = "gtk-launch iwgtk"
+# format = "{speed_down;M*B} {speed_up;M*B}"
+# interval = 1
 
 # [[block]]
 # block = "disk_space"
@@ -68,31 +68,25 @@ interval = 1
 # interval = 1
 # format = "{1m}"
 
-[[block]]
-block = "sound"
-max_vol = 100
-# driver = "pulseaudio"
-on_click = "pavucontrol"
-headphones_indicator = true
-
 # [[block]]
 # block = "backlight"
 # device = "intel_backlight"
 # invert_icons = true
 # root_scaling = 2.4
 
-
-[[block]]
-block = "battery"
-format = "{percentage}"
-full_format = ""
-interval = 10
-info = 50
-
 [[block]]
 block = "time"
 interval = 20
-format = "%a-%j %d/%m/%y %I:%M %p"
+# format = "%a-%j %d/%m/%y %I:%M %p"
+format = "%a %d/%m %I:%M%p"
+
+[[block]]
+block = "keyboard_layout"
+driver = "sway"
+format = "{layout}"
+[block.mappings]
+"English (US)" = "EN"
+"Arabic (N/A)" = "Ara"
 
 [[block]]
 block = "toggle"
@@ -104,12 +98,18 @@ command_off = "swaymsg 'inhibit_idle none'"
 #icon_off = "eye_slash"
 
 [[block]]
-block = "keyboard_layout"
-driver = "sway"
-format = "{layout}"
-[block.mappings]
-"English (US)" = "EN"
-"Arabic (N/A)" = "Ara"
+block = "sound"
+max_vol = 100
+# driver = "pulseaudio"
+on_click = "pavucontrol"
+headphones_indicator = true
+
+[[block]]
+block = "battery"
+format = "{percentage}"
+full_format = ""
+interval = 10
+info = 50
 
 [[block]]
 block = "custom"

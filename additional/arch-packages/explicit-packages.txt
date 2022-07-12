@@ -4,6 +4,7 @@ arc-gtk-theme
 arc-icon-theme
 arch-install-scripts
 arduino-cli
+aws-cli
 base
 bat
 bemenu
@@ -11,9 +12,9 @@ bluez
 bluez-utils
 bridge-utils
 brightnessctl
-btop
 btrfs-progs
 calc
+choose
 chromium
 cmatrix
 code
@@ -42,6 +43,7 @@ git
 git-delta
 github-cli
 glhack
+glow
 gnome-chess
 gnome-themes-extra
 gnuchess
@@ -63,19 +65,17 @@ libappindicator-gtk3
 libva-utils
 linux-firmware
 linux-lts
-linux-lts-headers
 linux-zen
-linux-zen-headers
 linuxconsole
 logrotate
 lsof
-lxappearance-gtk3
 mako
 man-db
 man-pages
 mcfly
 mesa-utils
 mpv
+mtr
 nautilus
 ncdu
 neofetch
@@ -92,7 +92,6 @@ pacman-contrib
 pamixer
 pavucontrol
 pbzip2
-pcmanfm-qt
 pigz
 pipewire
 pipewire-alsa
@@ -101,12 +100,13 @@ pipewire-pulse
 plocate
 polkit
 polkit-gnome
+power-profiles-daemon
 powertop
 pyside2
 python-black
 python-pip
 qbittorrent
-qemu
+qemu-desktop
 qt5-wayland
 qt5ct
 qt6ct
@@ -114,6 +114,7 @@ refind
 reflector
 sane-airscan
 scrcpy
+sdl12-compat
 simple-scan
 sl
 smartmontools
@@ -132,6 +133,7 @@ terminus-font
 tk
 tldr
 torbrowser-launcher
+traceroute
 translate-shell
 trash-cli
 tree
