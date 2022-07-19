@@ -1,6 +1,7 @@
 set {
     # win key
-    $mod Mod4
+    $super Mod4
+    $alt Mod1
 
     # default apps
     $file_manager org.gnome.Nautilus
@@ -28,108 +29,109 @@ set {
 bindsym --to-code {
 
     # quick access shortcut
-    $mod+KP_Enter exec gtk-launch $cli_file_manager
+    $super+KP_Enter exec gtk-launch $cli_file_manager
     # Start a terminal
-    $mod+Return exec gtk-launch $term
+    $super+Return exec gtk-launch $term
     # Open sway settings
-    $mod+Comma exec gtk-launch $code_editor ~/.config/sway
+    $super+Comma exec gtk-launch $code_editor ~/.config/sway
     # Firefox
-    $mod+w exec gtk-launch firefox
-    $mod+Shift+w exec firefox -private-window
+    $super+w exec gtk-launch firefox
+    $super+Shift+w exec firefox -private-window
     # Chromium
-    $mod+Alt+w exec gtk-launch chromium
-    $mod+Alt+Shift+w exec chromium --incognito
+    $super+Alt+w exec gtk-launch chromium
+    $super+Alt+Shift+w exec chromium --incognito
     # Start File Manager
-    $mod+f exec gtk-launch $file_manager
+    $super+f exec gtk-launch $file_manager
     # Start Code Editor
-    $mod+KP_Divide exec gtk-launch $code_editor
+    $super+KP_Divide exec gtk-launch $code_editor
     # Start System Monitor
-    $mod+Backslash exec gtk-launch $sys_monitor
+    $super+Backslash exec gtk-launch $sys_monitor
     # Start Media Player
-    $mod+m exec gtk-launch $media_player
+    $super+m exec gtk-launch $media_player
     # desktop menu (bemenu + j4-menu-desktop)
-    $mod+a exec wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%
+    $super+a exec wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%
     # desktop menu (nwg-drawr)
-    # $mod+Shift+a exec pkill -USR1 nwg-drawer
-    $mod+Shift+a exec $desktop_menu
+    # $super+Shift+a exec pkill -USR1 nwg-drawer
+    $super+Shift+a exec $desktop_menu
     # .local/bin/bepower
-    $mod+Shift+q exec bepower.sh -m '$menu'
+    $super+Shift+q exec bepower.sh -m '$menu'
     # clipboard pick
-    $mod+v exec clipman pick --tool bemenu \
+    $super+v exec clipman pick --tool bemenu \
         -T'-i -n -l 5 --fn "Hack Regular 16" -p "clipboard" --scrollbar autohide' 
     # color picker
-    $mod+c exec gtk-launch wl-color-picker
+    $super+c exec gtk-launch wl-color-picker
     # emoji picker
-    $mod+period exec wofi-emoji
+    $super+period exec wofi-emoji
     # screenshots
+    $alt+Print exec grimshot save area - | swappy -f -
     Print exec grimshot --notify copy area
     Shift+Print exec grimshot --notify save area
-    $mod+Print exec grimshot --notify copy window
-    $mod+Shift+Print exec grimshot --notify save window
+    $super+Print exec grimshot --notify copy window
+    $super+Shift+Print exec grimshot --notify save window
     # xorg xeyes
-    $mod+x exec xeyes
+    $super+x exec xeyes
 
     ### Sway jargon ###
     # Reload the configuration file
-    $mod+Shift+c reload
+    $super+Shift+c reload
     # Resize mode
-    $mod+Shift+r mode "resize"
+    $super+Shift+r mode "resize"
     # Kill focused window
-    # $mod+q exec quit_or_shutdown.sh
-    $mod+q kill
-    $mod+F4 exec wkill.sh
+    # $super+q exec quit_or_shutdown.sh
+    $super+q kill
+    $super+F4 exec wkill.sh
     
     # Layouts	
-    # $mod+s layout stacking
-    $mod+l layout toggle split tabbed
-    $mod+t layout tabbed
+    # $super+s layout stacking
+    $super+l layout toggle split tabbed
+    $super+t layout tabbed
     # Fullscreen
-    $mod+F1 fullscreen
+    $super+F1 fullscreen
     # Hide waybar
-    # $mod+b exec killall -SIGUSR1 waybar
+    # $super+b exec killall -SIGUSR1 waybar
     # hide sway-bar
-    $mod+b bar mode toggle
+    $super+b bar mode toggle
     # Toggle the current focus between tiling and floating mode
-    $mod+Grave floating toggle
+    $super+Grave floating toggle
     # Swap focus between the tiling area and the floating area
     # Alt+Grave focus mode_toggle
     # Move focused window to scratchpad
-    $mod+Shift+minus move scratchpad
+    $super+Shift+minus move scratchpad
     # switch-show applications in the scratchpad
-    $mod+minus scratchpad show
+    $super+minus scratchpad show
 
     # Move your focus around the output screen
-    $mod+Up focus up
-    $mod+Down focus down
-    $mod+Left focus left
-    $mod+Right focus right
+    $super+Up focus up
+    $super+Down focus down
+    $super+Left focus left
+    $super+Right focus right
 
     # Move the focused window around the output
-    $mod+Shift+Up move up
-    $mod+Shift+Down move down
-    $mod+Shift+Left move left
-    $mod+Shift+Right move right
+    $super+Shift+Up move up
+    $super+Shift+Down move down
+    $super+Shift+Left move left
+    $super+Shift+Right move right
 
     # Switch to previous and next workspaces
-    $mod+Control+Left exec traverse_workspace.sh prev workspace
-    $mod+Control+Right exec traverse_workspace.sh next workspace
+    $super+Control+Left exec traverse_workspace.sh prev workspace
+    $super+Control+Right exec traverse_workspace.sh next workspace
     
     # Same with arrow keys
-    $mod+Shift+Control+Left exec traverse_workspace.sh prev container
-    $mod+Shift+Control+Right exec traverse_workspace.sh next container
+    $super+Shift+Control+Left exec traverse_workspace.sh prev container
+    $super+Shift+Control+Right exec traverse_workspace.sh next container
     
     # Switch between the most recent workspaces
     # Alt+Tab workspace back_and_forth
     # Alt+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
 
     # Follow focused container to workspacee
-    $mod+Shift+1 move container to workspace number 1, workspace number 1
-    $mod+Shift+2 move container to workspace number 2, workspace number 2
-    $mod+Shift+3 move container to workspace number 3, workspace number 3
-    $mod+Shift+4 move container to workspace number 4, workspace number 4
-    $mod+Shift+5 move container to workspace number 5, workspace number 5
-    $mod+Shift+6 move container to workspace number 6, workspace number 6
-    $mod+Shift+7 move container to workspace number 7, workspace number 7
+    $super+Shift+1 move container to workspace number 1, workspace number 1
+    $super+Shift+2 move container to workspace number 2, workspace number 2
+    $super+Shift+3 move container to workspace number 3, workspace number 3
+    $super+Shift+4 move container to workspace number 4, workspace number 4
+    $super+Shift+5 move container to workspace number 5, workspace number 5
+    $super+Shift+6 move container to workspace number 6, workspace number 6
+    $super+Shift+7 move container to workspace number 7, workspace number 7
 
     # volume and brightness
     XF86AudioRaiseVolume exec pamixer --unmute --increase 5 && pamixer --get-volume > $SWAYSOCK.audio
@@ -147,22 +149,22 @@ bindsym --to-code {
 
 bindsym --no-repeat {
     # Switch to workspace
-    $mod+1 workspace number 1; exec "echo 1 > /tmp/sovpipe"
-    $mod+2 workspace number 2; exec "echo 1 > /tmp/sovpipe"
-    $mod+3 workspace number 3; exec "echo 1 > /tmp/sovpipe"
-    $mod+4 workspace number 4; exec "echo 1 > /tmp/sovpipe"
-    $mod+5 workspace number 5; exec "echo 1 > /tmp/sovpipe"
-    $mod+6 workspace number 6; exec "echo 1 > /tmp/sovpipe"
-    $mod+7 workspace number 7; exec "echo 1 > /tmp/sovpipe"
+    $super+1 workspace number 1; exec "echo 1 > /tmp/sovpipe"
+    $super+2 workspace number 2; exec "echo 1 > /tmp/sovpipe"
+    $super+3 workspace number 3; exec "echo 1 > /tmp/sovpipe"
+    $super+4 workspace number 4; exec "echo 1 > /tmp/sovpipe"
+    $super+5 workspace number 5; exec "echo 1 > /tmp/sovpipe"
+    $super+6 workspace number 6; exec "echo 1 > /tmp/sovpipe"
+    $super+7 workspace number 7; exec "echo 1 > /tmp/sovpipe"
 }
 
 bindsym --release {
     # Done switching to workspace to workspace
-    $mod+1 workspace number 1; exec "echo 0 > /tmp/sovpipe"
-    $mod+2 workspace number 2; exec "echo 0 > /tmp/sovpipe"
-    $mod+3 workspace number 3; exec "echo 0 > /tmp/sovpipe"
-    $mod+4 workspace number 4; exec "echo 0 > /tmp/sovpipe"
-    $mod+5 workspace number 5; exec "echo 0 > /tmp/sovpipe"
-    $mod+6 workspace number 6; exec "echo 0 > /tmp/sovpipe"
-    $mod+7 workspace number 7; exec "echo 0 > /tmp/sovpipe"
+    $super+1 workspace number 1; exec "echo 0 > /tmp/sovpipe"
+    $super+2 workspace number 2; exec "echo 0 > /tmp/sovpipe"
+    $super+3 workspace number 3; exec "echo 0 > /tmp/sovpipe"
+    $super+4 workspace number 4; exec "echo 0 > /tmp/sovpipe"
+    $super+5 workspace number 5; exec "echo 0 > /tmp/sovpipe"
+    $super+6 workspace number 6; exec "echo 0 > /tmp/sovpipe"
+    $super+7 workspace number 7; exec "echo 0 > /tmp/sovpipe"
 }

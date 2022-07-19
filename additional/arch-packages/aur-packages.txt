@@ -12,6 +12,7 @@ doasedit-alternative
 dotbot
 downgrade
 envycontrol
+flutter-chromium
 gopreload-git
 greetd
 greetd-ddlm-git

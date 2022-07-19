@@ -16,6 +16,7 @@ btrfs-progs
 calc
 choose
 chromium
+clang
 cmatrix
 code
 cups
