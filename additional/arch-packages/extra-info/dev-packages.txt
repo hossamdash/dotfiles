@@ -19,3 +19,13 @@ arduino-cli
 jdk-openjdk
 # view source files for libraries
 openjdk-src
+
+
+## devops
+ansible-core
+docker
+docker-compose
+postgresql-libs
+aws-cli
+github-cli
+git-delta

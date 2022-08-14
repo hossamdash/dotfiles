@@ -6,5 +6,4 @@ airshipper
 gnome-chess
 gnuchess // engine
 glhack
-fishfight
 supertuxcart

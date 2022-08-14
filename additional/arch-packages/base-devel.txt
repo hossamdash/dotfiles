@@ -1,3 +1,4 @@
+archlinux-keyring
 autoconf
 automake
 binutils

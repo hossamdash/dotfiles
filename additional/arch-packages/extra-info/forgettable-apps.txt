@@ -1,0 +1,15 @@
+# image compressor
+curtail
+# file-cleaner
+czkawka
+# metadata cleaner
+metadata-cleaner (flatpak)
+# cut alternative
+choose
+# translate
+translate-shell
+dictd
+# markdown renderer for xdg-ninja (home directory cleaner)
+glow
+# terminal image viwer
+viu

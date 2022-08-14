@@ -1,5 +1,6 @@
 alacritty
 alsa-utils
+ansible-core
 arc-gtk-theme
 arc-icon-theme
 arch-install-scripts
@@ -20,10 +21,13 @@ clang
 cmatrix
 code
 cups
+curtail
 dconf-editor
 dictd
 dmidecode
 dnsmasq
+docker
+docker-compose
 dust
 easyeffects
 edk2-ovmf
@@ -35,7 +39,6 @@ exfatprogs
 figlet
 file-roller
 firefox
-fishfight
 flake8
 flatpak
 gammastep
@@ -82,6 +85,7 @@ ncdu
 neofetch
 neovim
 noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
 obs-studio
@@ -101,6 +105,7 @@ pipewire-pulse
 plocate
 polkit
 polkit-gnome
+postgresql-libs
 power-profiles-daemon
 powertop
 pyside2

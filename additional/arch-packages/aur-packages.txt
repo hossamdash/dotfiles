@@ -18,6 +18,7 @@ greetd
 greetd-ddlm-git
 grimshot
 handlr-bin
+hyprland-bin
 ipman
 iwgtk
 j4-dmenu-desktop

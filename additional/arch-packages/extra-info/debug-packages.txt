@@ -2,6 +2,9 @@
 evtest
 wev
 
+# gamepad testomg
+linuxconsole
+
 ## intel
 # hw accelration
 libva-utils
@@ -15,3 +18,4 @@ lsof
 strace
 traceroute
 mtr
+usbutils
