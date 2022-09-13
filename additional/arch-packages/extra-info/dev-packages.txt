@@ -21,9 +21,15 @@ jdk-openjdk
 openjdk-src
 
 
+## flutter
+flutter-chromium
+ninja
+
 ## devops
 ansible-core
 docker
+docker-credential-secretservice
+vagrant
 docker-compose
 postgresql-libs
 aws-cli

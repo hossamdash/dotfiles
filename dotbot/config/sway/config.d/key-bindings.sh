@@ -71,6 +71,8 @@ bindsym --to-code {
     # xorg xeyes
     $super+x exec xeyes
 
+    # make windows sticky
+    $super+s sticky toggle
     ### Sway jargon ###
     # Reload the configuration file
     $super+Shift+c reload

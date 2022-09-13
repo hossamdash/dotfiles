@@ -14,12 +14,13 @@
 - link:
     # home
     ~/.profile: profile
-    ~/.zprofile: profile
+    ~/.config/.zprofile: profile
     
 
     # .config
     ~/.config/alacritty: config/alacritty
     ~/.config/retroarch: config/retroarch
+    ~/.config/docker: config/docker
     # auto starting application
     ~/.config/autostart: config/autostart
     ~/.config/bat: config/bat

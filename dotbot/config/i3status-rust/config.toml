@@ -90,12 +90,12 @@ format = "{layout}"
 
 [[block]]
 block = "toggle"
-text = ""
+# text = ""
 command_state = "echo"
 command_on = "swaymsg 'inhibit_idle open'"
-#icon_on = "eye"
+# icon_on = "eye"
 command_off = "swaymsg 'inhibit_idle none'"
-#icon_off = "eye_slash"
+# icon_off = "eye_slash"
 
 [[block]]
 block = "sound"
@@ -110,6 +110,7 @@ format = "{percentage}"
 full_format = ""
 interval = 10
 info = 50
+
 
 [[block]]
 block = "custom"
