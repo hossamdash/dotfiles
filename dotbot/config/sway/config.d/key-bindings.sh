@@ -135,13 +135,14 @@ bindsym --to-code {
     $super+Shift+6 move container to workspace number 6, workspace number 6
     $super+Shift+7 move container to workspace number 7, workspace number 7
 
-    # volume and brightness
-    XF86AudioRaiseVolume exec pamixer --unmute --increase 5 && pamixer --get-volume > $SWAYSOCK.audio
-    Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125
-    XF86AudioLowerVolume exec pamixer --unmute --decrease 5 && pamixer --get-volume > $SWAYSOCK.audio
+    # volume 
+    XF86AudioRaiseVolume exec amixer sset Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $SWAYSOCK.audio
+    XF86AudioLowerVolume exec amixer sset Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $SWAYSOCK.audio
+    
+    # extreme volume sates
+    # Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125
     Shift+XF86AudioLowerVolume exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio )
 
-    XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio ) || pamixer --get-volume > $SWAYSOCK.audio
     
     XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     
@@ -151,22 +152,11 @@ bindsym --to-code {
 
 bindsym --no-repeat {
     # Switch to workspace
-    $super+1 workspace number 1; exec "echo 1 > /tmp/sovpipe"
-    $super+2 workspace number 2; exec "echo 1 > /tmp/sovpipe"
-    $super+3 workspace number 3; exec "echo 1 > /tmp/sovpipe"
-    $super+4 workspace number 4; exec "echo 1 > /tmp/sovpipe"
-    $super+5 workspace number 5; exec "echo 1 > /tmp/sovpipe"
-    $super+6 workspace number 6; exec "echo 1 > /tmp/sovpipe"
-    $super+7 workspace number 7; exec "echo 1 > /tmp/sovpipe"
-}
-
-bindsym --release {
-    # Done switching to workspace to workspace
-    $super+1 workspace number 1; exec "echo 0 > /tmp/sovpipe"
-    $super+2 workspace number 2; exec "echo 0 > /tmp/sovpipe"
-    $super+3 workspace number 3; exec "echo 0 > /tmp/sovpipe"
-    $super+4 workspace number 4; exec "echo 0 > /tmp/sovpipe"
-    $super+5 workspace number 5; exec "echo 0 > /tmp/sovpipe"
-    $super+6 workspace number 6; exec "echo 0 > /tmp/sovpipe"
-    $super+7 workspace number 7; exec "echo 0 > /tmp/sovpipe"
+    $super+1 workspace number 1
+    $super+2 workspace number 2
+    $super+3 workspace number 3
+    $super+4 workspace number 4
+    $super+5 workspace number 5
+    $super+6 workspace number 6
+    $super+7 workspace number 7
 }

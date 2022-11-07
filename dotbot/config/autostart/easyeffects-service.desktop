@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=EasyEffects
-Comment=EasyEffects Service
+Name=Easy Effects
+Comment=Easy Effects Service
 Exec=easyeffects --gapplication-service
 Icon=easyeffects
 StartupNotify=false

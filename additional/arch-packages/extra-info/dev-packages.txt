@@ -35,3 +35,5 @@ postgresql-libs
 aws-cli
 github-cli
 git-delta
+go
+gopls

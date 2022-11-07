@@ -79,6 +79,7 @@ block = "time"
 interval = 20
 # format = "%a-%j %d/%m/%y %I:%M %p"
 format = "%a %d/%m %I:%M%p"
+on_click = "gsimplecal"
 
 [[block]]
 block = "keyboard_layout"
@@ -100,7 +101,7 @@ command_off = "swaymsg 'inhibit_idle none'"
 [[block]]
 block = "sound"
 max_vol = 100
-# driver = "pulseaudio"
+driver = "alsa"
 on_click = "pavucontrol"
 headphones_indicator = true
 

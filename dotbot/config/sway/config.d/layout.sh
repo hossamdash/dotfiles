@@ -1,6 +1,7 @@
 # Windows exceptions
 for_window {
     [title="Firefox — Sharing Indicator"] floating enable, sticky enable, move position 94 ppt 93 ppt
+    [title="gsimplecal"] floating enable, sticky enable, move position 72 ppt 75 ppt
     [title="xeyes"] floating enable, sticky enable
     [title="\ -\ Connection\ Details$"] floating enable, sticky enable
     [title="Emulator"] floating enable, border none
@@ -8,6 +9,7 @@ for_window {
     [title="pcmanfm-qt file-roller"] floating enable
 }
 
+for_window [app_id="^chrome-.*"] shortcuts_inhibitor disable
 
 # Workspace layout
 # workspace_layout tabbed

@@ -13,6 +13,7 @@ nvidia-suspend
 systemd-networkd
 cups
 libvirtd
+docker
 
 # timers
 fstrim
