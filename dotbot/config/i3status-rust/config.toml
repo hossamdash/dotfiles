@@ -87,7 +87,7 @@ driver = "sway"
 format = "{layout}"
 [block.mappings]
 "English (US)" = "EN"
-"Arabic (N/A)" = "Ara"
+"Arabic (N/A)" = "Ar"
 
 [[block]]
 block = "toggle"
@@ -100,8 +100,8 @@ command_off = "swaymsg 'inhibit_idle none'"
 
 [[block]]
 block = "sound"
+step_width = 2
 max_vol = 100
-driver = "alsa"
 on_click = "pavucontrol"
 headphones_indicator = true
 

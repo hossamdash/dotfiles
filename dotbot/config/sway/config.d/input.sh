@@ -5,7 +5,7 @@ input $touchpad {
     tap enabled
     tap_button_map lrm
     # dwt disabled
-    # events disabled_on_external_mouse
+    events disabled_on_external_mouse
     natural_scroll enabled
     # postive value
     scroll_factor .5

@@ -4,7 +4,7 @@ set {
     $alt Mod1
 
     # default apps
-    $file_manager org.gnome.Nautilus
+    $file_manager pcmanfm-qt
     $cli_file_manager ranger
     $term Alacritty
     $term2 alacritty
@@ -136,15 +136,16 @@ bindsym --to-code {
     $super+Shift+7 move container to workspace number 7, workspace number 7
 
     # volume 
-    XF86AudioRaiseVolume exec amixer sset Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $SWAYSOCK.audio
-    XF86AudioLowerVolume exec amixer sset Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $SWAYSOCK.audio
+    XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.audio
     
     # extreme volume sates
-    # Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125
+    Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125 && pamixer --get-volume > $SWAYSOCK.audio
     Shift+XF86AudioLowerVolume exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio )
+    XF86AudioMicMute exec pamixer --default-source -t
+    Shift+F9 exec pamixer --default-source -t
 
     
-    XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     
     XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
     XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness

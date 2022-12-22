@@ -9,6 +9,7 @@ aws-cli
 base
 bat
 bemenu
+blueman
 bluez
 bluez-utils
 bridge-utils
@@ -58,7 +59,6 @@ gvfs
 gvfs-mtp
 handbrake
 hdparm
-helix
 helvum
 htop
 i3status-rust
@@ -83,10 +83,8 @@ man-db
 man-pages
 mcfly
 mesa-utils
-micro
 mpv
 mtr
-nautilus
 ncdu
 neofetch
 neovim
@@ -105,6 +103,7 @@ pacman-contrib
 pamixer
 pavucontrol
 pbzip2
+pcmanfm-qt
 pigz
 pipewire
 pipewire-alsa

@@ -12,10 +12,8 @@ exec {
     sway-audio-idle-inhibit &>/dev/null
 
     # wob sockets to show visualization
-    mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --background-color "#000000FF" \
-        --border-color "#FFFFFFFF" --bar-color "#FCBA03FF" --anchor 'top' --anchor 'center' --margin 50 --width 320 --height 40
-    mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --background-color "#000000FF" \
-        --border-color "#FFFFFFFF" --bar-color "#4287f5FF" --anchor 'bottom' --anchor 'center' --margin 50 --width 320 --height 40
+    rm -f $SWAYSOCK.brightness && mkfifo $SWAYSOCK.brightness && tail -f $SWAYSOCK.brightness | wob --config ~/.config/wob/brightness-bar.ini
+    rm -f $SWAYSOCK.audio && mkfifo $SWAYSOCK.audio && tail -f $SWAYSOCK.audio | wob --config ~/.config/wob/audio-bar.ini
 
     # Swayidle and Swaylock
     swayidle -w \
