@@ -35,11 +35,11 @@ show_marks = "visible"
 # format_mem = "{mem_used_percents}"
 # format_swap = "{swap_used_percents}"
 
-# [[block]]
-# block = "net"
-# on_click = "gtk-launch iwgtk"
-# format = "{speed_down;M*B} {speed_up;M*B}"
-# interval = 1
+[[block]]
+block = "net"
+on_click = "gtk-launch iwgtk"
+format = "{speed_down;M*B} {speed_up;M*B}"
+interval = 1
 
 # [[block]]
 # block = "disk_space"
