@@ -9,6 +9,8 @@ for_window {
     [title="pcmanfm-qt file-roller"] floating enable
 }
 
+
+for_window [app_id="^zenity*"] floating enable
 for_window [app_id="^chrome-.*"] shortcuts_inhibitor disable
 
 # Workspace layout

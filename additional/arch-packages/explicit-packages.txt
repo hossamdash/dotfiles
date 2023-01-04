@@ -41,7 +41,6 @@ exfatprogs
 figlet
 file-roller
 firefox
-flake8
 flatpak
 gammastep
 ghostscript
@@ -116,7 +115,6 @@ postgresql-libs
 power-profiles-daemon
 powertop
 pyside2
-python-black
 qbittorrent
 qemu-desktop
 qt5-wayland

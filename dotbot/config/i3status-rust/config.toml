@@ -38,7 +38,7 @@ show_marks = "visible"
 [[block]]
 block = "net"
 on_click = "gtk-launch iwgtk"
-format = "{speed_down;M*B} {speed_up;M*B}"
+format = "{speed_down;M*B}"
 interval = 1
 
 # [[block]]
