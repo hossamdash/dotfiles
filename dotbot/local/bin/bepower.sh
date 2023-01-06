@@ -7,7 +7,7 @@ Hibernate
 '
 
 
-Chosen=$(printf "$Menu" | bemenu -i -p "██ ̲̅]" -H 30 --fn "Hack Regular 12")
+Chosen=$(printf "$Menu" | bemenu -i -p "██ ̲̅]" -n -l 6 --fn "Hack Regular 16" --scrollbar autohide)
 #Chosen=$(printf "$Menu" | $menu)
 if [ "$Chosen" = 'Shutdown' ]; then exec shutdown -h now
 elif [ "$Chosen" = 'Restart' ]; then exec reboot

@@ -57,7 +57,7 @@ bindsym --to-code {
     $super+Shift+q exec bepower.sh -m '$menu'
     # clipboard pick
     $super+v exec clipman pick --tool bemenu \
-        -T'-i -n -l 5 --fn "Hack Regular 16" -p "clipboard" --scrollbar autohide' 
+        -T'-i -n -l 7 --fn "Hack Regular 14" -p "clipboard" --scrollbar autohide' 
     # color picker
     $super+c exec gtk-launch wl-color-picker
     # emoji picker
@@ -160,4 +160,17 @@ bindsym --no-repeat {
     $super+5 workspace number 5
     $super+6 workspace number 6
     $super+7 workspace number 7
+}
+
+######## Touchpad Bindings ########
+
+bindgesture {
+    swipe:right workspace prev
+    swipe:left workspace next
+    pinch:inward+up move up
+    pinch:inward+down move down
+    pinch:inward+left move left
+    pinch:inward+right move right
+    --exact swipe:3:down exec grimshot --notify copy window
+    --exact swipe:3:up exec wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%
 }

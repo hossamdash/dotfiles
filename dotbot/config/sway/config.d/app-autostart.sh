@@ -46,12 +46,11 @@ exec {
 
     # easyeffects sound enhancer
     gio launch ~/.config/autostart/easyeffects-service.desktop
-    # pactl set-default-sink easyeffects_sink
-    # pactl set-default-source easyeffects_source
 }
 
 # always executed on reload
 exec_always {
     # set default mic volume
     pactl set-source-volume @DEFAULT_SOURCE@ 20%
+    import_gsettings.sh
 }

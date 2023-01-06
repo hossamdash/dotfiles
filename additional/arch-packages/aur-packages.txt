@@ -1,5 +1,6 @@
 airshipper
 archlinux-menus
+btdu
 clipman
 code-features
 code-icons
@@ -18,7 +19,6 @@ flutter-chromium
 greetd
 greetd-ddlm-git
 grimshot
-hyprland-bin
 ipman
 iwgtk
 nwg-look-bin
@@ -37,11 +37,9 @@ ventoy-bin
 vitetris
 wev
 wl-color-picker
-wlrctl
 wob
 wofi-emoji-git
 wvkbd
-xcursor-human
 xdg-ninja-git
 xdg-utils-handlr
 yt-dlp-drop-in

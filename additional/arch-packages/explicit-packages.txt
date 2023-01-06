@@ -12,6 +12,7 @@ bemenu
 blueman
 bluez
 bluez-utils
+bottom
 bridge-utils
 brightnessctl
 btop
@@ -165,7 +166,6 @@ wf-recorder
 wireless-regdb
 wireplumber
 wl-clipboard
-xcursor-bluecurve
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
