@@ -98,12 +98,12 @@ command_on = "swaymsg 'inhibit_idle open'"
 command_off = "swaymsg 'inhibit_idle none'"
 # icon_off = "eye_slash"
 
-[[block]]
-block = "sound"
-step_width = 2
-max_vol = 100
-on_click = "pavucontrol"
-headphones_indicator = true
+# [[block]]
+# block = "sound"
+# step_width = 2
+# max_vol = 100
+# on_click = "pavucontrol"
+# headphones_indicator = true
 
 [[block]]
 block = "battery"

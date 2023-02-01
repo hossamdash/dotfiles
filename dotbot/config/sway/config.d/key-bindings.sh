@@ -136,11 +136,11 @@ bindsym --to-code {
     $super+Shift+7 move container to workspace number 7, workspace number 7
 
     # volume 
-    XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.audio
-    XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.audio
+    # XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.audio
+    # XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.audio
     
     # extreme volume sates
-    Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125 && pamixer --get-volume > $SWAYSOCK.audio
+    # Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125 && pamixer --get-volume > $SWAYSOCK.audio
     Shift+XF86AudioLowerVolume exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.audio )
     XF86AudioMicMute exec pamixer --default-source -t
     Shift+F9 exec pamixer --default-source -t

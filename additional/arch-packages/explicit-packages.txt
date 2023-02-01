@@ -12,7 +12,6 @@ bemenu
 blueman
 bluez
 bluez-utils
-bottom
 bridge-utils
 brightnessctl
 btop
@@ -68,7 +67,6 @@ iptables-nft
 iwd
 j4-dmenu-desktop
 jdk-openjdk
-keepassxc
 kvantum
 libappindicator-gtk3
 libva-utils

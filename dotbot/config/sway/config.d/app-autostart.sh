@@ -45,7 +45,7 @@ exec {
     udiskie
 
     # easyeffects sound enhancer
-    gio launch ~/.config/autostart/easyeffects-service.desktop
+    # gio launch ~/.config/autostart/easyeffects-service.desktop
 }
 
 # always executed on reload
