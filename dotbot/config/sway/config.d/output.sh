@@ -27,5 +27,9 @@ seat * hide_cursor 60000
 seat * hide_cursor when-typing enable
 seat * keyboard_grouping none
 
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /mnt/Lenovo/Home/Pictures/wallpapers/blue-night.jpg fill
+# # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# output * bg /mnt/Lenovo/Home/Pictures/wallpapers/blue-night.jpg fill
+
+### Set random wallpaper
+set $wallpapers_path /mnt/Lenovo/Home/Pictures/wallpapers
+output * bg `find $wallpapers_path -type f | shuf -n 1` fill

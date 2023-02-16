@@ -4,16 +4,13 @@ iwd.service
 systemd-timesyncd
 systemd-oomd
 bluetooth
-greetd
 lmsensors
-com.system76.PowerDaemon.service
-nvidia-suspend
+
 
 # sockets
 systemd-networkd
 cups
 libvirtd
-docker
 
 # timers
 fstrim
@@ -26,4 +23,5 @@ logrotate
 ### user units ###
 # services
 xdg-user-dirs-update
+poweralertd
 wireplumber

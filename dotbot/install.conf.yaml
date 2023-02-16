@@ -14,21 +14,16 @@
 - link:
     # home
     ~/.profile: profile
-    ~/.config/.zprofile: profile
+    ~/.config/zsh/.zprofile: profile
     
 
     # .config
     ~/.config/alacritty: config/alacritty
-    ~/.config/retroarch: config/retroarch
-    ~/.config/docker: config/docker
-    # auto starting application
-    ~/.config/autostart: config/autostart
     ~/.config/bat: config/bat
+    ~/.config/wob: config/wob
     ~/.config/fontconfig: config/fontconfig
     ~/.config/gammastep: config/gammastep
     ~/.config/git: config/git
-    ~/.config/gtk-3.0: config/gtk-3.0
-    ~/.config/htop: config/htop
     ~/.config/i3status-rust: config/i3status-rust
     ~/.config/Kvantum: config/Kvantum
     ~/.config/mako: config/mako
@@ -38,14 +33,13 @@
     ~/.config/qt6ct: config/qt6ct
     ~/.config/sway: config/sway
     ~/.config/sworkstyle: config/sworkstyle
-    ~/.config/waybar: config/waybar
     ~/.config/zathura: config/zathura
     ~/.config/zsh: config/zsh
     ~/.config/chromium-flags.conf: config/chromium-flags.conf
+    ~/.config/code-flags.conf: config/chromium-flags.conf
     ~/.config/mimeapps.list: config/mimeapps.list
     ~/.config/user-dirs.dirs: config/user-dirs.dirs
     ~/.config/ranger: config/ranger
-    ~/.config/joshuto: config/joshuto
     
     # .local
     ~/.local/bin: local/bin

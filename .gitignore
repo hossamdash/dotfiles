@@ -5,3 +5,4 @@ dotbot/config/mpv/watch_later
 dotbot/config/mpv/mpvHistory.log
 dotbot/config/qBittorrent/lockfile
 dotbot/config/qBittorrent/rss/storage.lock
+**/__pycache__

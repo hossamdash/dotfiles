@@ -1,2 +1,1 @@
-main_user: locate libvirt uucp wheel hossam docker
-greeter: video
+main_user: locate libvirt wheel hossam

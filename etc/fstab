@@ -1,17 +1,20 @@
-UUID=824B-F99D      	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
-UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/         	btrfs     	rw,noatime,nodiratime,compress=zstd:3,space_cache,commit=120,subvol=@	0 0
+# /dev/sda1
+UUID=C94E-26A3      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
-UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/.snapshots         	btrfs     	rw,noatime,nodiratime,x-gvfs-hide,compress=zstd:3,space_cache,commit=120,subvol=@snapshots/@root_snapshots	0 0
+# /dev/sda2
+UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/         	btrfs     	rw,relatime,compress=zlib:3,ssd,space_cache=v2,subvolid=256,subvol=@	0 0
 
-UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/home     	btrfs     	rw,noatime,nodiratime,compress=zstd:3,space_cache,commit=120,subvol=@home	0 0
+# /dev/sda2
+UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/.snapshots	btrfs     	rw,relatime,compress=zlib:3,ssd,space_cache=v2,subvolid=257,subvol=@.snapshots	0 0
 
-UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/home/.snapshots     	btrfs     	rw,noatime,nodiratime,x-gvfs-hide,compress=zstd:3,space_cache,commit=120,subvol=@snapshots/@home_snapshots	0 0
+# /dev/sda2
+UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/home     	btrfs     	rw,relatime,compress=zlib:3,ssd,space_cache=v2,subvolid=258,subvol=@home	0 0
 
-UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/var/cache/pacman/pkg         	btrfs     	rw,noatime,nodiratime,x-gvfs-hide,compress=zstd:3,space_cache,commit=120,subvol=@pkg	0 0
+# /dev/sda2
+UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/var/cache/pacman/pkg	btrfs     	rw,relatime,compress=zlib:3,ssd,space_cache=v2,subvolid=259,subvol=@pkg	0 0
 
-UUID="ef9adfdb-3101-40ec-8acb-4b8caf602839"	/var/log         	btrfs     	rw,noatime,nodiratime,x-gvfs-hide,compress=zstd:3,space_cache,commit=120,subvol=@log	0 0
+# /dev/sda2
+UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/var/log  	btrfs     	rw,relatime,compress=zlib:3,ssd,space_cache=v2,subvolid=260,subvol=@log	0 0
 
-UUID=ab3fd042-5357-41c6-bde0-876f9ab380ec	none      	swap      	defaults  	0 0
-
-UUID="D0703879703867FC"				/mnt/Lenovo	ntfs		nosuid,fmask=100,acl,noatime,nodev,nofail,x-gvfs-show,uid=1000,gid=1000		0 0
+UUID="D0703879703867FC"				/mnt/Lenovo	ntfs3		nosuid,acl,noatime,nodev,nofail,x-gvfs-show,uid=1000,gid=1000		0 0

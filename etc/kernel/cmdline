@@ -1,1 +1,1 @@
-rw root=UUID=ef9adfdb-3101-40ec-8acb-4b8caf602839 rootflags=subvol=@ quiet udev.log_level=3 vt.global_cursor_default=0 nowatchdog bgrt_disable acpi_osi=! "acpi_osi=Windows 2015"
+root=PARTUUID=74f02254-b0ff-40ae-9e86-3656c83e332a rootflags=subvol=@ rootfstype=btrfs zswap.enabled=0 rw intel_pstate=no_hwp quiet udev.log_level=3 vt.global_cursor_default=0 nowatchdog bgrt_disable acpi_osi=! "acpi_osi=Windows 2015"
