@@ -1,7 +1,10 @@
+change graphics mode to integrated with envycontrol
 setup printing
 run sensorsdetect
 restart or modprobe the sound module for subwoofer
-# firefox
+
+
+#firefox
 disable pocket
 hardware accelration
 browser.tabs.loadBookmarksInBackground

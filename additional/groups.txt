@@ -1,1 +1,2 @@
 main_user: locate libvirt wheel hossam
+greeter: video

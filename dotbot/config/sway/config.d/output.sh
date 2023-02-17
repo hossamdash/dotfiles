@@ -31,5 +31,5 @@ seat * keyboard_grouping none
 # output * bg /mnt/Lenovo/Home/Pictures/wallpapers/blue-night.jpg fill
 
 ### Set random wallpaper
-set $wallpapers_path /mnt/Lenovo/Home/Pictures/wallpapers
+set $wallpapers_path ~/.config/sway/wallpapers
 output * bg `find $wallpapers_path -type f | shuf -n 1` fill

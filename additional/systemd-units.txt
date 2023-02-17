@@ -5,7 +5,12 @@ systemd-timesyncd
 systemd-oomd
 bluetooth
 lmsensors
+greetd
+tlp
 
+### (mask)
+systemd-rfkill.service
+systemd-rfkill.socket
 
 # sockets
 systemd-networkd
@@ -22,6 +27,5 @@ logrotate
 
 ### user units ###
 # services
-xdg-user-dirs-update
 poweralertd
 wireplumber

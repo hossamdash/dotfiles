@@ -21,6 +21,7 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
     ~/.config/wob: config/wob
+    ~/.config/gtk-3.0/bookmarks : config/gtk-3.0/bookmarks
     ~/.config/fontconfig: config/fontconfig
     ~/.config/gammastep: config/gammastep
     ~/.config/git: config/git

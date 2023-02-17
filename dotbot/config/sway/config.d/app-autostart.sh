@@ -39,7 +39,7 @@ exec {
     # gebaard -b
 
     # low power notificationsn
-    # poweralertd
+    poweralertd
 
     # automount 
     udiskie
