@@ -86,7 +86,6 @@ pipewire-pulse
 plocate
 polkit
 polkit-gnome
-power-profiles-daemon
 powertop
 qbittorrent
 qemu-desktop
@@ -112,6 +111,7 @@ system-config-printer
 telegram-desktop
 terminus-font
 tldr
+tlp
 torbrowser-launcher
 translate-shell
 trash-cli
@@ -147,4 +147,3 @@ zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
-base-devel

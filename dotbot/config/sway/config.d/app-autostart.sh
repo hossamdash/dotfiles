@@ -44,8 +44,8 @@ exec {
     # automount 
     udiskie
 
-    # easyeffects sound enhancer
-    # gio launch ~/.config/autostart/easyeffects-service.desktop
+    # jamesdsp sound enhancer
+    gio launch ~/.config/autostart/jdsp-gui.desktop
 }
 
 # always executed on reload

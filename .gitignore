@@ -3,6 +3,6 @@ dotbot/config/zsh/.zcompdump
 dotbot/config/retroarch/logs
 dotbot/config/mpv/watch_later
 dotbot/config/mpv/mpvHistory.log
-dotbot/config/qBittorrent/lockfile
-dotbot/config/qBittorrent/rss/storage.lock
+dotbot/config/qBittorrent/**
 **/__pycache__
+

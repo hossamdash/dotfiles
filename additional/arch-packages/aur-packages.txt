@@ -11,10 +11,12 @@ doasedit-alternative
 dotbot
 downgrade
 envycontrol
+greetd
+greetd-tuigreet
 grimshot
 ipman
 iwgtk
-ly
+jamesdsp
 nwg-look-bin
 paru-bin
 poweralertd
