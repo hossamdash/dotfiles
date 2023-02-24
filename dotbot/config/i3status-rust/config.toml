@@ -22,6 +22,9 @@ button = "left"
 cmd = "gtk-launch iwgtk"
 
 [[block]]
+block = "cpu"
+
+[[block]]
 block = "time"
 interval = 20
 [block.format]
