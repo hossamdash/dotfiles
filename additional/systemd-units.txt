@@ -16,6 +16,7 @@ systemd-rfkill.socket
 systemd-networkd
 cups
 libvirtd
+docker
 
 # timers
 fstrim

@@ -23,6 +23,8 @@ curtail
 dconf-editor
 dmidecode
 dnsmasq
+docker
+docker-compose
 dust
 edk2-ovmf
 efibootmgr
