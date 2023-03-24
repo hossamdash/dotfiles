@@ -11,6 +11,10 @@ tlp
 ### (mask)
 systemd-rfkill.service
 systemd-rfkill.socket
+### (disable)
+(archinstall)
+systemd-networkd-wait-online
+
 
 # sockets
 systemd-networkd

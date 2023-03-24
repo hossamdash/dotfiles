@@ -33,3 +33,4 @@ seat * keyboard_grouping none
 ### Set random wallpaper
 set $wallpapers_path ~/.config/sway/wallpapers
 output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+workspace_layout tabbed

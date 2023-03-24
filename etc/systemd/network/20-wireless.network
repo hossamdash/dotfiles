@@ -1,9 +1,0 @@
-[Match]
-Name=wl*
-
-[Network]
-DHCP=ipv4
-IPv6LinkLocalAddressGenerationMode=none
-
-[DHCP]
-RouteMetric=20

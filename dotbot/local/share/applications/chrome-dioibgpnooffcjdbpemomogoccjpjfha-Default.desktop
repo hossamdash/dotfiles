@@ -1,9 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=Create amazing videos with our online video editor - Mastershot
-Exec=/usr/bin/chromium --profile-directory=Default --app-id=dioibgpnooffcjdbpemomogoccjpjfha
-Icon=chrome-dioibgpnooffcjdbpemomogoccjpjfha-Default
-StartupWMClass=crx_dioibgpnooffcjdbpemomogoccjpjfha

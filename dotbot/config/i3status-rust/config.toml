@@ -9,9 +9,9 @@ theme = "modern"
 # idle_bg = "#25344ddf"
 # separator = "\ue0b2"
 
-[[block]]
-block = "focused_window"
-format = "$title.str(max_w:30) | "
+# [[block]]
+# block = "focused_window"
+# format = "$title.str(max_w:30) | "
 
 [[block]]
 block = "net"

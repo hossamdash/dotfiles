@@ -34,7 +34,6 @@
     ~/.config/qt6ct: config/qt6ct
     ~/.config/sway: config/sway
     ~/.config/sworkstyle: config/sworkstyle
-    ~/.config/zathura: config/zathura
     ~/.config/zsh: config/zsh
     ~/.config/chromium-flags.conf: config/chromium-flags.conf
     ~/.config/code-flags.conf: config/chromium-flags.conf

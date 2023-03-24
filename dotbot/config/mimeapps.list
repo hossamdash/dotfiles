@@ -2,8 +2,7 @@
 image/jpeg=firefox.desktop;
 
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop;
-image/*=swayimg.desktop;
+image/*=imv-dir.desktop;
 inode/directory=pcmanfm-qt.desktop;
 video/*=mpv.desktop;
 x-scheme-handler/http=firefox.desktop;
