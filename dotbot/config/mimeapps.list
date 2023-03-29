@@ -2,6 +2,8 @@
 image/jpeg=firefox.desktop;
 
 [Default Applications]
+application/pdf=firefox.desktop;
+application/zip=org.gnome.FileRoller.desktop;
 image/*=imv-dir.desktop;
 inode/directory=pcmanfm-qt.desktop;
 video/*=mpv.desktop;

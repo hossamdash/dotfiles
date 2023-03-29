@@ -39,6 +39,7 @@
     ~/.config/code-flags.conf: config/chromium-flags.conf
     ~/.config/mimeapps.list: config/mimeapps.list
     ~/.config/user-dirs.dirs: config/user-dirs.dirs
+    ~/.config/user-dirs.conf: config/user-dirs.conf
     ~/.config/ranger: config/ranger
     
     # .local
