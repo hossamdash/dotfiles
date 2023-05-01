@@ -4,7 +4,7 @@ bar {
     position bottom
     height 30
     status_command i3status-rs
-    workspace_min_width 50
+    workspace_min_width 75
     # strip_workspace_numbers yes
     font pango:Hack, Font Awesome 6 Free 10.5
     status_padding 0

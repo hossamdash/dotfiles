@@ -17,4 +17,6 @@ UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/var/cache/pacman/pkg	btrfs     	rw,re
 # /dev/sda2
 UUID=3d03ad50-e8f1-42ad-8bfb-e5124eb93bb1	/var/log  	btrfs     	rw,relatime,compress=zlib:3,ssd,space_cache=v2,subvolid=260,subvol=@log	0 0
 
-UUID="D0703879703867FC"				/mnt/Lenovo	ntfs3		nosuid,acl,noatime,nodev,nofail,x-gvfs-show,uid=1000,gid=1000		0 0
+UUID="D0703879703867FC"				/mnt/Lenovo	ntfs3		nosuid,acl,noatime,nofail,nodev,windows_names,nohidden,x-gvfs-show,uid=1000,gid=1000		0 0
+UUID=E4DEE126DEE0F1AA  none  ntfs  noauto,ro,uid=1000,gid=1000,x-gvfs-hide  0  0
+

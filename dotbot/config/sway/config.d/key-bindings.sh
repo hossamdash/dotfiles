@@ -1,35 +1,9 @@
-set {
-    # win key
-    $super Mod4
-    $alt Mod1
-
-    # default apps
-    $file_manager pcmanfm-qt
-    $cli_file_manager ranger
-    $term Alacritty
-    $term2 alacritty
-    $sys_monitor htop
-    $media_player mpv
-    $code_editor code-oss
-
-    # launch menu style
-    $highlight #3daee9
-    $menu bemenu -i -p "launch ▶" -H 30 --tf "$highlight" --hf "$highlight" \
-        --sf "$highlight" --scf "$highlight" --fn "Hack Regular 12"
-    # Run Prompt 
-    $desktop_menu j4-dmenu-desktop --dmenu='$menu' --term=alacritty \
-        --use-xdg-de --no-generic | xargs swaymsg exec --
-}
-
-
-
-
 ######## Keyboard Bindings ########
 
 bindsym --to-code {
 
     # quick access shortcut
-    $super+KP_Enter exec gtk-launch $cli_file_manager
+    $super+KP_Enter exec gtk-launch $term
     # Start a terminal
     $super+Return exec gtk-launch $term
     # Open sway settings
@@ -42,6 +16,7 @@ bindsym --to-code {
     $super+Alt+Shift+w exec chromium --incognito
     # Start File Manager
     $super+f exec gtk-launch $file_manager
+    $super+Shift+f exec gtk-launch $cli_file_manager
     # Start Code Editor
     $super+KP_Divide exec gtk-launch $code_editor
     # Start System Monitor
@@ -49,15 +24,14 @@ bindsym --to-code {
     # Start Media Player
     $super+m exec gtk-launch $media_player
     # desktop menu (bemenu + j4-menu-desktop)
-    $super+a exec wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%
+    $super+a exec $desktop_gui_menu
     # desktop menu (nwg-drawr)
     # $super+Shift+a exec pkill -USR1 nwg-drawer
     $super+Shift+a exec $desktop_menu
     # .local/bin/bepower
-    $super+Shift+q exec bepower.sh -m '$menu'
+    $super+Shift+q exec bepower.sh -m $power_menu
     # clipboard pick
-    $super+v exec clipman pick --tool bemenu \
-        -T'-i -n -l 7 --fn "Hack Regular 14" -p "clipboard" --scrollbar autohide' 
+    $super+v exec clipman pick --tool $clipboard_menu 
     # color picker
     $super+c exec gtk-launch wl-color-picker
     # emoji picker
@@ -85,10 +59,10 @@ bindsym --to-code {
     
     # Layouts	
     # $super+s layout stacking
-    $super+l layout toggle split tabbed
+    $super+l layout toggle splitv splith
     $super+t layout tabbed
     # Fullscreen
-    $super+F1 fullscreen
+    $super+F11 fullscreen
     # Hide waybar
     # $super+b exec killall -SIGUSR1 waybar
     # hide sway-bar
@@ -101,39 +75,6 @@ bindsym --to-code {
     $super+Shift+minus move scratchpad
     # switch-show applications in the scratchpad
     $super+minus scratchpad show
-
-    # Move your focus around the output screen
-    $super+Up focus up
-    $super+Down focus down
-    $super+Left focus left
-    $super+Right focus right
-
-    # Move the focused window around the output
-    $super+Shift+Up move up
-    $super+Shift+Down move down
-    $super+Shift+Left move left
-    $super+Shift+Right move right
-
-    # Switch to previous and next workspaces
-    $super+Control+Left exec traverse_workspace.sh prev workspace
-    $super+Control+Right exec traverse_workspace.sh next workspace
-    
-    # Same with arrow keys
-    $super+Shift+Control+Left exec traverse_workspace.sh prev container
-    $super+Shift+Control+Right exec traverse_workspace.sh next container
-    
-    # Switch between the most recent workspaces
-    # Alt+Tab workspace back_and_forth
-    # Alt+Shift+Tab move container workspace back_and_forth, workspace back_and_forth
-
-    # Follow focused container to workspacee
-    $super+Shift+1 move container to workspace number 1, workspace number 1
-    $super+Shift+2 move container to workspace number 2, workspace number 2
-    $super+Shift+3 move container to workspace number 3, workspace number 3
-    $super+Shift+4 move container to workspace number 4, workspace number 4
-    $super+Shift+5 move container to workspace number 5, workspace number 5
-    $super+Shift+6 move container to workspace number 6, workspace number 6
-    $super+Shift+7 move container to workspace number 7, workspace number 7
 
     # volume 
     # XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.audio
@@ -151,16 +92,7 @@ bindsym --to-code {
     XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $SWAYSOCK.brightness
 }
 
-bindsym --no-repeat {
-    # Switch to workspace
-    $super+1 workspace number 1
-    $super+2 workspace number 2
-    $super+3 workspace number 3
-    $super+4 workspace number 4
-    $super+5 workspace number 5
-    $super+6 workspace number 6
-    $super+7 workspace number 7
-}
+
 
 ######## Touchpad Bindings ########
 

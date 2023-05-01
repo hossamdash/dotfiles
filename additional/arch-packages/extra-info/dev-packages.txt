@@ -5,7 +5,7 @@ flake8
 pyside2
 # python pacakge manager
 python-pip
-# matplotlib GUI
+# matplotlib GUI and turtle graphics
 tk
 # formatter
 python-black

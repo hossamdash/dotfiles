@@ -2,4 +2,4 @@
 MatchBus=usb
 MatchUdevType=keyboard
 MatchProduct=0x6078
-AttrEventCodeDisable=EV_KEY:0xF0
+AttrEventCode=-EV_KEY:0xF0
