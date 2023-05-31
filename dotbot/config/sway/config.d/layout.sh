@@ -8,6 +8,7 @@ for_window {
     [title="Android Emulator "] floating enable, border none
     [title="pcmanfm-qt file-roller"] floating enable
     [title="Python Turtle Graphics"] floating enable
+    [title="Tk"] floating enable
 }
 
 

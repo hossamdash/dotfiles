@@ -17,3 +17,14 @@ glow
 viu
 # rust text editors
 helix, lapse
+# spell check
+aspell
+aspell-ar
+aspell-en
+# ocr
+gimagereader-gtk
+tesseract-data-en
+tesseract-data-ar
+# vagrant plugins
+vagrant-hostmanager
+vagrant-vbguest

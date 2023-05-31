@@ -10,11 +10,12 @@ greetd
 tlp
 nvidia-suspend
 
-### (mask)
+### (mask) because of tlp
 systemd-rfkill.service
 systemd-rfkill.socket
 ### (disable)
 (archinstall)
+sysetmd-resolved
 systemd-networkd-wait-online
 getty@.service
 

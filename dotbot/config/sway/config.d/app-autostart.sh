@@ -2,8 +2,6 @@
 exec {
 ### sway specific
 
-    # display management
-    way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
     # per workspace auto generated icons
     sworkstyle &> /tmp/sworkstyle.log
 
@@ -45,9 +43,6 @@ exec {
 
     # automount 
     udiskie
-
-    # jamesdsp sound enhancer
-    # gio launch ~/.config/autostart/jdsp-gui.desktop
     
     # easyeffects sound enhancer
     gio launch ~/.config/autostart/easyeffects-service.desktop
