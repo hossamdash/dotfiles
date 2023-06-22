@@ -4,8 +4,7 @@ run sensorsdetect
 restart or modprobe the sound module for subwoofer
 
 
-#firefox
+# firefox
 disable pocket
 hardware accelration
 browser.tabs.loadBookmarksInBackground
-copy remote configs into their folders

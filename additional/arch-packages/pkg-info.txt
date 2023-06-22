@@ -1,0 +1,116 @@
+## hardware packages
+# intel hardware accelration
+intel-media-driver
+# intel microcode
+intel-ucode
+# nvidia out of tree driver (dkms)
+nvidia-dkms
+nvidia-utils
+nvidia-settings
+nvidia-prime
+linux-zen-headers
+nvtop
+
+
+## cosmetic packages
+# large english letters
+figlet
+# hacker man
+cmatrix
+sl
+# indicator that i never had a GF
+neofetch
+
+
+## debug packages
+# wayland input testing
+wev
+evtest
+# gamepad testing
+linuxconsole
+# test hw accel is working with vainfo
+libva-utils
+# intel_gpu_top
+intel-gpu-tools
+# test vulkan with vulkaninfo
+vulkan-tools
+# test igpu and dgpu with glxgears
+mesa-utils
+# list open files and ports
+lsof
+# see system calls made by a process
+strace
+# print route trace to reach a host
+traceroute
+# advanced traceroute and ping
+mtr
+# debug usb devices
+usbutils
+# check network stats
+ss
+# network ports
+nmap
+
+
+## dev packages
+# pythonlinter (bundled vscode extension)
+flake8
+# python pacakge manager
+python-pip
+# matplotlib GUI and turtle graphics in python
+tk
+# formatter (bundled vscode extension)
+python-black
+# arduino
+arduino-cli
+# JDK
+jdk-openjdk
+# view source files for libraries in java IDEs
+openjdk-src
+# flutter use chromium for web
+flutter-chromium
+# build native linux apps with flutter
+ninja
+# go language server 
+gopls
+# devops stuff
+ansible-core
+docker
+docker-credential-secretservice
+vagrant
+aws-cli-v2
+github-cli
+git-delta
+
+
+## forgettable apps
+# image compressor
+curtail
+# file-cleaner
+czkawka
+# disk usage
+dust
+# btrfs disk usage
+btdu
+# metadata cleaner
+metadata-cleaner
+# cut alternative
+choose
+# translate
+translate-shell
+dictd
+# markdown renderer for xdg-ninja (home directory cleaner)
+glow
+# terminal image viwer
+viu
+# rust text editors
+helix
+lapse
+# spell check
+aspell
+aspell-ar
+aspell-en
+# ocr
+gimagereader-gtk
+tesseract-data-en
+tesseract-data-ar

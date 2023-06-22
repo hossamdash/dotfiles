@@ -1,9 +1,0 @@
-# AUR
-vitetris
-airshipper
-
-# Repos
-gnome-chess
-gnuchess // engine
-glhack
-supertuxcart

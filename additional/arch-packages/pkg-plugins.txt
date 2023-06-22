@@ -1,0 +1,4 @@
+## vagrant plugins
+vagrant plugin install vagrant-libvirt
+vagrant plugin install vagrant-hostmanager
+

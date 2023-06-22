@@ -1,2 +1,6 @@
-main_user: locate libvirt wheel hossam
-greeter: video
+# user hossam 
+locate
+libvirt
+wheel
+# user greeter
+video
