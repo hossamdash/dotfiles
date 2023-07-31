@@ -5,7 +5,6 @@ intel-media-driver
 intel-ucode
 # nvidia out of tree driver (dkms)
 nvidia-dkms
-nvidia-utils
 nvidia-settings
 nvidia-prime
 linux-zen-headers
