@@ -1,7 +1,7 @@
 # add space after elevation to make the shell check the next command with aliases
 alias doas='doas '
 alias sudo='sudo '
-alias ls='exa -l --group-directories-first'
+alias ls='eza -l --group-directories-first'
 alias vim='nvim'
 alias py='python'
 alias man="man --pager 'nvim +Man!'"
@@ -11,3 +11,4 @@ alias igpu-vk="VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json "
 alias gittree="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias vssh='TERM=xterm-256color vagrant ssh'
 alias ssh='TERM=xterm-256color ssh'
+alias pu='paru -Sy archlinux-keyring && paru -Su'

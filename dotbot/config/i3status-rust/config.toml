@@ -14,6 +14,15 @@ theme = "modern"
 # format = "$title.str(max_w:30) | "
 
 [[block]]
+block = "toggle"
+format = " $icon HDMI"
+# text = ""
+command_state = "pactl info | grep -Ei 'sink.*hdmi.*'"
+command_on = "pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo+input:analog-stereo"
+command_off = "pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo"
+# icon_on  = "volume_stereo"
+
+[[block]]
 block = "net"
 format = " $icon ^icon_net_down$speed_down.eng(prefix:M) "
 interval = 1
@@ -64,7 +73,6 @@ block = "battery"
 format = " $icon $percentage "
 full_format = ""
 interval = 10
-
 
 [[block]]
 block = "custom"

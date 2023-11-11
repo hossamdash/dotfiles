@@ -24,3 +24,5 @@ for_window [app_id="^chrome-.*"] shortcuts_inhibitor disable
 # Change normal to inverse to use left mouse button for resizing and right
 # mouse button for dragging.
 floating_modifier $super normal
+
+workspace_layout default

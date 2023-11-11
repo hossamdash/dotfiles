@@ -15,10 +15,14 @@ envycontrol
 grimshot
 ipman
 iwgtk
+localsend-bin
+metadata-cleaner
 nwg-look-bin
+ocrmypdf
 paru-bin
 poweralertd
 ranger-git
+snappers
 stable-diffusion-ui
 sway-audio-idle-inhibit-git
 swaykbdd
@@ -28,7 +32,6 @@ ttf-mac-fonts
 ttf-meslo-nerd-font-powerlevel10k
 ttf-ms-fonts
 ventoy-bin
-wev
 wl-color-picker
 wob
 wofi-emoji-git
