@@ -1,3 +1,7 @@
+function gssh {
+    TERM=xterm-256color gcloud compute ssh "$@"
+}
+
 alias ls="eza -l --group-directories-first"
 alias ssh="TERM=xterm-256color ssh"
 alias ssh="TERM=xterm-256color ssh"
