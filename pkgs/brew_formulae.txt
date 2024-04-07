@@ -14,13 +14,11 @@ gifsicle
 git
 git-filter-repo
 helm
-joshuto
 k8sgpt
 k9s
 krew
 kubectx
 kubetui
-launchctl-completion
 libpq
 lima
 mcfly
@@ -30,7 +28,6 @@ sqlcmd
 sshuttle
 terraform
 tlrc
-viu
 watch
 wget
 xdg-ninja
