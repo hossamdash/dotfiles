@@ -1,3 +1,4 @@
+ansible-lint
 asciinema
 awscli
 bat
@@ -13,6 +14,7 @@ gh
 gifsicle
 git
 git-filter-repo
+glab
 helm
 k8sgpt
 k9s
@@ -26,12 +28,15 @@ neofetch
 powerlevel10k
 sqlcmd
 sshuttle
+telnet
 terraform
 tlrc
+viu
 watch
 wget
 xdg-ninja
 yazi
+yq
 yt-dlp
 zellij
 zsh-autosuggestions
