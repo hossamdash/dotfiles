@@ -1,0 +1,6 @@
+[includeIf "gitdir:~/Home/nagwa/"]
+    path = nagwa-config
+[includeIf "gitdir:~/Home/averroes/"]
+    path = averroes-config
+[includeIf "gitdir:~/Home/learning/"]
+    path = personal-config
