@@ -1,0 +1,85 @@
+{
+    // telemetery and update
+    "update.mode": "manual",
+    "telemetry.telemetryLevel": "off",
+    "redhat.telemetry.enabled": false,
+    // various setting
+    "editor.minimap.enabled": false,
+    "search.mode": "reuseEditor",
+    "debug.toolBarLocation": "docked",
+    "explorer.confirmDelete": false,
+    // annoying security notifications
+    "security.workspace.trust.enabled": false,
+    // app window
+    "window.autoDetectColorScheme": true,
+    // auto save and langauge
+    "files.defaultLanguage": "${activeEditorLanguage}",
+    "files.autoSave": "onFocusChange",
+    // code editor
+    "editor.fontSize": 14.5,
+    "editor.fontLigatures": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.wordWrap": "on",
+    "editor.suggest.insertMode": "replace",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.settings.editor": "json",
+    // in app terminal
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
+    "terminal.integrated.fontSize": 13.5,
+    "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+    "terminal.integrated.shellIntegration.enabled": true,
+    // python
+    "indentRainbow.includedLanguages": [
+        "python"
+    ],
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    // git
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    // markdown
+    "markdown.preview.fontFamily": "'MesloLGS NF'",
+    "markdown.preview.fontSize": 14.5,
+    "explorer.confirmDragAndDrop": false,
+    "vs-kubernetes": {
+        "disable-linters": [
+            "resource-limits"
+        ],
+        "vs-kubernetes.crd-code-completion": "disabled"
+    },
+    "workbench.editor.untitled.labelFormat": "name",
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "git.confirmSync": false,
+    "workbench.colorTheme": "GitHub Dark",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "html": true,
+        "groovy": true
+    },
+    "workbench.sideBar.location": "right",
+    "cSpell.enabledLanguageIds": [
+        "markdown",
+        "scminput"
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "markdownShortcuts.bullets.marker": "-",
+    "github.copilot.editor.enableAutoCompletions": true,
+}
