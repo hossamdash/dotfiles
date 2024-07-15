@@ -39,6 +39,8 @@ source $(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
 export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 # Add Krew binaries to the PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# Add local k3s cluster to kubeconfig
+export KUBECONFIG=~/.kube/config:~/.lima/k3s/copied-from-guest/kubeconfig.yaml
 # Load custom aliases
 source ~/.config/zsh/.aliases
 
