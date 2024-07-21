@@ -17,6 +17,7 @@ ipman
 iwgtk
 localsend-bin
 metadata-cleaner
+nwg-displays
 nwg-look-bin
 ocrmypdf
 paru-bin

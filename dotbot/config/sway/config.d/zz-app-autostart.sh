@@ -53,4 +53,5 @@ exec_always {
     # set default mic volume
     pactl set-source-volume @DEFAULT_SOURCE@ 20%
     import_gsettings.sh
+    amixer -c 0 sset 'Bass Speaker',0 41 > /dev/null
 }

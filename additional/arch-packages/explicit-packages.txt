@@ -131,7 +131,9 @@ sdl12-compat
 simple-scan
 smartmontools
 snapper
+speech-dispatcher
 strace
+supertuxkart
 swappy
 sway
 swaybg

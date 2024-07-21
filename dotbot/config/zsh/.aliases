@@ -1,6 +1,7 @@
 # add space after elevation to make the shell check the next command with aliases
 alias doas='doas '
 alias sudo='sudo '
+alias sudoedit='doesedit '
 alias ls='eza -l --group-directories-first'
 alias vim='nvim'
 alias py='python'
