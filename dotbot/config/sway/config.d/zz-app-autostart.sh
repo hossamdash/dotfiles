@@ -19,7 +19,7 @@ exec {
     swayidle -w \
         timeout 600 'brightnessctl set 10% -s' resume 'brightnessctl -r' \
         timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock --daemonize --show-failed-attempts --image "/mnt/Lenovo/Home/Pictures/wallpapers/summer-vibes.jpg" ' \
+        before-sleep 'swaylock --daemonize --show-failed-attempts --image "~/.config/sway/wallpapers/pixel-dragonkeep.png"' \
         idlehint 1800
 
 ### wayland specfic
@@ -45,7 +45,7 @@ exec {
     udiskie
     
     # easyeffects sound enhancer
-    gio launch ~/.config/autostart/easyeffects-service.desktop
+    # gio launch ~/.config/autostart/easyeffects-service.desktop
 }
 
 # always executed on reload

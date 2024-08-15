@@ -9,10 +9,10 @@ bindsym --no-repeat {
 #     $super+7 workspace number 7
 
 #     # Move your focus around the output screen
-    $super+Up focus up
-    $super+Down focus down
-    $super+Left focus left
-    $super+Right focus right
+    # $super+Up focus up
+    # $super+Down focus down
+    # $super+Left focus left
+    # $super+Right focus right
 
 #     # Move the focused window around the output
 #     $super+Shift+Up move up

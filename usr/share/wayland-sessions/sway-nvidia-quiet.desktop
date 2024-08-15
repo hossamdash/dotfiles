@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Sway - Quiet with Nvidia Support
-Comment=An i3-compatible Wayland compositor
-Exec=/usr/share/wayland-sessions/sway-nvidia-quiet.sh
-Type=Application

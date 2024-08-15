@@ -20,10 +20,16 @@ bindsym $super+Shift+8 exec "swaysome move 8"
 bindsym $super+Shift+9 exec "swaysome move 9"
 
 
-bindsym $super+Shift+KP_LEFT exec traverse_workspace_swaysome.sh prev container
-bindsym $super+Shift+KP_RIGHT exec traverse_workspace_swaysome.sh next container
-bindsym $super+KP_LEFT exec traverse_workspace_swaysome.sh prev workspace
-bindsym $super+KP_RIGHT exec traverse_workspace_swaysome.sh next workspace
+# bindsym $super+Shift+KP_LEFT exec traverse_workspace_swaysome.sh prev container
+# bindsym $super+Shift+KP_RIGHT exec traverse_workspace_swaysome.sh next container
+# bindsym $super+KP_LEFT exec traverse_workspace_swaysome.sh prev workspace
+# bindsym $super+KP_RIGHT exec traverse_workspace_swaysome.sh next workspace
+
+
+bindsym $super+Shift+Left exec traverse_workspace_swaysome.sh prev container
+bindsym $super+Shift+Right exec traverse_workspace_swaysome.sh next container
+bindsym $super+Left exec traverse_workspace_swaysome.sh prev workspace
+bindsym $super+Right exec traverse_workspace_swaysome.sh next workspace
 
 # Move focused container to next output
 bindsym $super+Tab exec "swaysome next-output"

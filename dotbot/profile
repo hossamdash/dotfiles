@@ -1,8 +1,5 @@
 # append local bin to the front of path
 export PATH=$HOME/.local/bin:$PATH
-# flutter
-export PATH=$HOME/dev-packages/flutter/bin:$PATH
-export PATH=$HOME/dev-packages/android-sdk/cmdline-tools/latest/bin:$PATH
 
 # XDG standard compliance
 export XDG_CONFIG_HOME=$HOME/.config
@@ -11,8 +8,6 @@ export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
-export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
-export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export VAGRANT_HOME="$XDG_DATA_HOME"/vagrant
 export MINIKUBE_HOME="$XDG_DATA_HOME"/minikube
@@ -21,14 +16,21 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
-
+#### AWS CLI
+# export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
+# export AWS_CLI_HISTORY_FILE="$XDG_DATA_HOME/aws/history"
+# export AWS_SHARED_CREDENTIALS_FILE="$XDG_DATA_HOME/aws/credentials"
+# export AWS_WEB_IDENTITY_TOKEN_FILE="$XDG_DATA_HOME/aws/token"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
 # wayland stuff
 export MOZ_ENABLE_WAYLAND=1
+export WARP_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland
 export CLUTTER_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+export ELECTRON_OZONE_PLATFORM_HINT=auto
 
 # preferences 
 export EDITOR=nvim

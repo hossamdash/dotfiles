@@ -24,7 +24,6 @@ bindkey '^R' history-incremental-search-backward
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
-source ${XDG_CONFIG_HOME}/zsh/.arduino-completion.zsh
 
 # Aliases
 source ${XDG_CONFIG_HOME}/zsh/.aliases
@@ -118,9 +117,12 @@ function command_not_found_handler {
 # sourcing downloaded packages
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# External Powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# aws completeion
+source `which aws_zsh_completer.sh`
+# k3s completion
+source ${XDG_CONFIG_HOME}/zsh/k3s.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if zmodload zsh/terminfo && (( terminfo[colors] >= 256 )); then

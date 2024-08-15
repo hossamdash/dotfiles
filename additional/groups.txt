@@ -1,6 +1,2 @@
 # user hossam 
-locate
-libvirt
 wheel
-# user greeter
-video

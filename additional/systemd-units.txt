@@ -3,12 +3,10 @@
 iwd.service
 systemd-timesyncd
 systemd-oomd
-systemd-boot-update
 bluetooth
-lmsensors
+sensord
 greetd
 tlp
-nvidia-suspend
 
 ### (mask) because of tlp
 systemd-rfkill.service
@@ -30,10 +28,8 @@ paccache
 pacman-filesdb-refresh
 # timers
 fstrim
-plocate-updatedb
-snapper-cleanup
-snapper-timeline
 logrotate
+plocate-updatedb
 
 ### user units ###
 # services

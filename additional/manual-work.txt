@@ -1,10 +1,6 @@
-change graphics mode to integrated with envycontrol
 setup printing
 run sensorsdetect
-restart or modprobe the sound module for subwoofer
-
-
-# firefox
-disable pocket
-hardware accelration
-browser.tabs.loadBookmarksInBackground
+setup theming (nwg-look, kvantum, qt5ct, qt6ct)
+btrfs assistant
+finger print enrollment
+append cmdline to boot paramaeters

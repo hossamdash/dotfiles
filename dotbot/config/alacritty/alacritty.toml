@@ -1,0 +1,13 @@
+[font]
+size = 13.0
+
+[font.normal]
+family = "MesloLGS NF"
+
+[window]
+dynamic_padding = true
+opacity = 0.8
+
+[window.padding]
+x = 4
+y = 10

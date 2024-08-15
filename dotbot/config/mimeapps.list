@@ -1,8 +1,8 @@
 [Default Applications]
 inode/directory=pcmanfm-qt.desktop;
-application/pdf=firefox.desktop
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+application/pdf=zathura.desktop
+x-scheme-handler/http=thorium-browser.desktop;
+x-scheme-handler/https=thorium-browser.desktop;
 x-scheme-handler/terminal=Alacritty.desktop;
 text/plain=nvim.desktop;
 text/x-python=nvim.desktop;
@@ -126,4 +126,4 @@ application/ogg=mpv.desktop;
 application/x-ogg=mpv.desktop;
 
 [Added Associations]
-application/vnd.ms-powerpoint=chromium.desktop;firefox.desktop;
+application/vnd.ms-powerpoint=thorium-browser.desktop;

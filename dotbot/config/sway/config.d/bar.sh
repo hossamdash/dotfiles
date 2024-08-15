@@ -1,7 +1,7 @@
 # i3status-rs
 bar {
     id 1
-    position bottom
+    position top
     height 30
     status_command i3status-rs
     workspace_min_width 75
@@ -25,11 +25,11 @@ bar {
     # }
     colors {
         # separator #666666
-        background #222d32
-        statusline #dddddd
-        focused_workspace #435f7b #435f7b #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #222d32 #222d32 #888888
-        urgent_workspace #2f343a #900000 #ffffff
+        background #222d32de
+        statusline #ddddddde
+        focused_workspace #435f7bde #435f7bde #ffffffde
+        active_workspace #333333de #333333de #ffffffde
+        inactive_workspace #222d32de #222d32de #888888de
+        urgent_workspace #2f343ade #900000de #ffffffde
     }
 } 

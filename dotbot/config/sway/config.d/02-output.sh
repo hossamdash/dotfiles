@@ -17,7 +17,7 @@ hide_edge_borders --i3 smart
 # seat * xcursor_theme Adwaita 12
 
 # Screen Scaling
-output eDP-1 scale 1.15
+output eDP-1 scale 1.25
 # output eDP-1 scale 1
 output HDMI-A-1 mode 1920x1080@60Hz
 # title

@@ -1,7 +1,7 @@
 # Windows exceptions
 for_window {
     [title="Firefox — Sharing Indicator"] floating enable, sticky enable, move position 94 ppt 93 ppt
-    [title="gsimplecal"] floating enable, sticky enable, move position 72 ppt 75 ppt
+    [title="gsimplecal"] floating enable, sticky enable, move position 62 ppt 0 ppt
     [title="xeyes"] floating enable, sticky enable
     [title="\ -\ Connection\ Details$"] floating enable, sticky enable
     [title="Emulator"] floating enable, border none
@@ -9,6 +9,9 @@ for_window {
     [title="pcmanfm-qt file-roller"] floating enable
     [title="Python Turtle Graphics"] floating enable
     [title="Tk"] floating enable
+    [title="Smile"] floating enable
+    # slack context menu
+    # [title=""] floating enable, move position 80 ppt 0 pptio
 }
 
 

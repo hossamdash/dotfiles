@@ -1,8 +1,14 @@
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = hossamdash2@gmail.com
 	name = Hossam Mostafa
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:~/Work/averroes/"]
+    path = averroes-config.conf
+
+[includeIf "gitdir:~/Work/b_labs/"]
+    path = b_labs-config.conf
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret

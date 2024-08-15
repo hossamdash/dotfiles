@@ -9,8 +9,8 @@ bindsym --to-code {
     # Open sway settings
     $super+Comma exec gtk-launch $code_editor ~/.config/sway
     # Firefox
-    $super+w exec gtk-launch firefox
-    $super+Shift+w exec firefox -private-window
+    $super+w exec gtk-launch thorium-browser
+    $super+Shift+w exec thorium-browser --incognito
     # Chromium
     $super+Alt+w exec gtk-launch chromium
     $super+Alt+Shift+w exec chromium --incognito
@@ -23,19 +23,16 @@ bindsym --to-code {
     $super+Backslash exec gtk-launch $sys_monitor
     # Start Media Player
     $super+m exec gtk-launch $media_player
-    # desktop menu (bemenu + j4-menu-desktop)
+    # desktop menu
     $super+a exec $desktop_gui_menu
-    # desktop menu (nwg-drawr)
-    # $super+Shift+a exec pkill -USR1 nwg-drawer
-    $super+Shift+a exec $desktop_menu
     # .local/bin/bepower
-    $super+Shift+q exec bepower.sh -m $power_menu
+    $super+Shift+q exec $power_menu
     # clipboard pick
     $super+v exec clipman pick --tool $clipboard_menu 
     # color picker
     $super+c exec gtk-launch wl-color-picker
     # emoji picker
-    $super+period exec wofi-emoji
+    $super+period exec gtk-launch $emoji_picker
     # screenshots
     $alt+Print exec grimshot save area - | swappy -f -
     Print exec grimshot --notify copy area
@@ -77,8 +74,8 @@ bindsym --to-code {
     $super+minus scratchpad show
 
     # volume 
-    # XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.audio
-    # XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.audio
+    XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.audio
     
     # extreme volume sates
     # Shift+XF86AudioRaiseVolume exec pamixer --unmute --allow-boost --set-volume 125 && pamixer --get-volume > $SWAYSOCK.audio
@@ -104,5 +101,11 @@ bindgesture {
     pinch:inward+left move left
     pinch:inward+right move right
     --exact swipe:3:down exec grimshot --notify copy window
-    --exact swipe:3:up exec wofi --show=drun --allow-images --allow-markup --insensitive --parse-search --define=key_expand=Right --width=60% --height=60%
+    --exact swipe:3:up exec $desktop_gui_menu
 }
+
+######## Laptop Lid########
+# bindswitch {
+#     --reload --locked lid:on exec "[ $(swaymsg -t get_outputs | jq '. | length') -gt 1 ] && swaymsgoutput eDP-1 disable"
+#     --reload --locked lid:off output eDP-1 enable
+# }

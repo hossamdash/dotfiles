@@ -14,32 +14,27 @@
 - link:
     # home
     ~/.profile: profile
-    ~/.config/zsh/.zprofile: profile
+    ~/.zshenv: profile
     
 
     # .config
+    ~/.config/kanshi: config/kanshi
+    ~/.config/yofi: config/yofi
+    ~/.config/waylogout: config/waylogout
+    ~/.config/pacman: config/pacman
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
     ~/.config/wob: config/wob
-    ~/.config/gtk-3.0/bookmarks : config/gtk-3.0/bookmarks
-    ~/.config/fontconfig: config/fontconfig
     ~/.config/gammastep: config/gammastep
     ~/.config/git: config/git
     ~/.config/i3status-rust: config/i3status-rust
-    ~/.config/Kvantum: config/Kvantum
     ~/.config/mako: config/mako
     ~/.config/mpv: config/mpv
-    ~/.config/qBittorrent: config/qBittorrent
-    ~/.config/qt5ct: config/qt5ct
-    ~/.config/qt6ct: config/qt6ct
     ~/.config/sway: config/sway
     ~/.config/sworkstyle: config/sworkstyle
     ~/.config/zsh: config/zsh
-    ~/.config/chromium-flags.conf: config/chromium-flags.conf
-    ~/.config/code-flags.conf: config/chromium-flags.conf
+    ~/.config/thorium-flags.conf: config/chromium-flags.conf
     ~/.config/mimeapps.list: config/mimeapps.list
-    ~/.config/user-dirs.dirs: config/user-dirs.dirs
-    ~/.config/user-dirs.conf: config/user-dirs.conf
     ~/.config/ranger: config/ranger
     
     # .local
