@@ -8,7 +8,6 @@ aspell-en
 base
 base-devel
 bat
-bemenu
 bind
 blueman
 bluez
@@ -20,6 +19,7 @@ btrfs-progs
 calc
 cameractrls
 catfish
+cliphist
 cmatrix
 code
 cups

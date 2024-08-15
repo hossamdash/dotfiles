@@ -28,7 +28,7 @@ bindsym --to-code {
     # .local/bin/bepower
     $super+Shift+q exec $power_menu
     # clipboard pick
-    $super+v exec clipman pick --tool $clipboard_menu 
+    $super+v exec $clipboard_menu
     # color picker
     $super+c exec gtk-launch wl-color-picker
     # emoji picker

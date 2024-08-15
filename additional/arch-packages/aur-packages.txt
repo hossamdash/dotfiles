@@ -4,7 +4,6 @@ aws-cli-v2-bin
 boop-gtk-bin
 btdu
 btrfs-assistant
-clipman
 code-features
 code-icons
 code-marketplace
