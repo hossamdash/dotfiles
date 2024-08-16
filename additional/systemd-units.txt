@@ -35,3 +35,6 @@ plocate-updatedb
 # services
 poweralertd
 wireplumber
+
+### user sockets ###
+foot-server

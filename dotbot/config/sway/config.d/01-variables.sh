@@ -7,7 +7,7 @@ set {
     $file_manager pcmanfm-qt
     $menu bemenu
     $cli_file_manager ranger
-    $term Alacritty
+    $term org.codeberg.dnkl.footclient.desktop
     $sys_monitor htop
     $media_player mpv
     $code_editor code
