@@ -16,5 +16,5 @@ set {
     $power_menu waylogout
     $desktop_gui_menu yofi --quiet --disable-syslog-logger
     $emoji_picker it.mijorus.smile
-    $clipboard_menu cliphist list | cut -f 2- | yofi --config-file ~/.config/yofi/yofi-clipboard.config dialog | wl-copy
+    $clipboard_menu cliphist list | yofi --config-file ~/.config/yofi/yofi-clipboard.config dialog | cliphist decode | wl-copy
 }
