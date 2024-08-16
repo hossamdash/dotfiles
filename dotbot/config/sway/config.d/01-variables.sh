@@ -10,7 +10,7 @@ set {
     $term Alacritty
     $sys_monitor htop
     $media_player mpv
-    $code_editor code-oss
+    $code_editor code
  
 
     $power_menu waylogout

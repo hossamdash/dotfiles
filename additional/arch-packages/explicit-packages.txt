@@ -21,7 +21,6 @@ cameractrls
 catfish
 cliphist
 cmatrix
-code
 cups
 curtail
 dconf-editor

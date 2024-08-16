@@ -4,9 +4,6 @@ aws-cli-v2-bin
 boop-gtk-bin
 btdu
 btrfs-assistant
-code-features
-code-icons
-code-marketplace
 commitizen-go
 czkawka-gui-bin
 dashbinsh
@@ -44,6 +41,7 @@ ttf-mac-fonts
 ttf-meslo-nerd-font-powerlevel10k
 ttf-ms-fonts
 ventoy-bin
+visual-studio-code-bin
 waylogout-git
 wl-color-picker
 wvkbd

@@ -34,6 +34,7 @@
     ~/.config/sworkstyle: config/sworkstyle
     ~/.config/zsh: config/zsh
     ~/.config/thorium-flags.conf: config/chromium-flags.conf
+    ~/.config/code-flags.conf: config/chromium-flags.conf
     ~/.config/mimeapps.list: config/mimeapps.list
     ~/.config/ranger: config/ranger
     
