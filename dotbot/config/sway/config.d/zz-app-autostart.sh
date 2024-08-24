@@ -25,7 +25,7 @@ exec {
 ### wayland specfic
 
     # clipboard
-    wl-paste -t text --watch cliphist store
+    wl-paste --watch cliphist store
 
 ### general
 
