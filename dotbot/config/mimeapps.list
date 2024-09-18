@@ -127,4 +127,4 @@ video/x-msvideo=mpv.desktop;
 video/x-smv=mpv.desktop;
 x-scheme-handler/http=thorium-browser.desktop;
 x-scheme-handler/https=thorium-browser.desktop;
-x-scheme-handler/terminal=Alacritty.desktop;
+x-scheme-handler/terminal=org.codeberg.dnkl.foot.desktop;

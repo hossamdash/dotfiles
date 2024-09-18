@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=K9S
+GenericName=K8S-TUI
+Icon=utilities-terminal
+Exec=k9s
+Terminal=true
+Categories=System;Monitor;ConsoleOnly;Kubernetes;k8s;
+Keywords=k8s;tui;monitor

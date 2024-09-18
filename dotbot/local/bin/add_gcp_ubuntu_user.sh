@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# generate the necessary config
+gcloud compute config-ssh
+
 # Path to the SSH config file
 SSH_CONFIG_FILE="$HOME/.ssh/config"
 

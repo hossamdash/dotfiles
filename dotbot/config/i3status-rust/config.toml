@@ -36,6 +36,12 @@ button = "left"
 cmd = "gtk-launch htop"
 
 [[block]]
+block = "memory"
+[[block.click]]
+button = "left"
+cmd = "gtk-launch htop"
+
+[[block]]
 block = "time"
 interval = 20
 [block.format]

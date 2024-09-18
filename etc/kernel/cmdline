@@ -1,1 +1,1 @@
-root=(...) intel_pstate=no_hwp quiet udev.log_level=3 vt.global_cursor_default=0 nowatchdog
+root=(...) quiet udev.log_level=3 vt.global_cursor_default=0 nowatchdog

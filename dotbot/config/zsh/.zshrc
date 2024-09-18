@@ -1,3 +1,6 @@
+# random pokemon
+pokeget random --hide-name
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -122,7 +125,12 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # aws completeion
 source `which aws_zsh_completer.sh`
 # k3s completion
-source ${XDG_CONFIG_HOME}/zsh/k3s.zsh
+source <(k3s completion zsh)
+# k8sgpt completion
+source <(k8sgpt completion zsh)
+# azure completions
+autoload -U +X bashcompinit && bashcompinit
+source /usr/share/bash-completion/completions/az
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if zmodload zsh/terminfo && (( terminfo[colors] >= 256 )); then

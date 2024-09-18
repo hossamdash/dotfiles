@@ -15,6 +15,7 @@
     # home
     ~/.profile: profile
     ~/.zshenv: profile
+    ~/.terraformrc: terraformrc
     
 
     # .config
